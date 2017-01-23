@@ -2,7 +2,8 @@
 calls_data = tryCatch({
   res <- read.csv(system.file("apps/brapi/data/calls.csv", package = "brapiTS"),
            stringsAsFactors = FALSE)
-  res[stringr::str_detect(res$client.brapi, "x"), 3:5]
+  #res[stringr::str_detect(res$client.brapi, "x"), ]
+  res
 }, error = function(e) {
   NULL
 }
