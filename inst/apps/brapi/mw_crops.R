@@ -1,5 +1,12 @@
+crops_data = tryCatch({
+  res <- read.csv(system.file("apps/brapi/data/crops.csv", package = "brapiTS"),
+                  stringsAsFactors = FALSE)
+  res[, 1]
+}, error = function(e) {
+  NULL
+}
+)
 
-crops_data = readLines(system.file("apps/brapi/data/crops.txt", package = "brapiTS"))
 
 crops = list(
   metadata = list(

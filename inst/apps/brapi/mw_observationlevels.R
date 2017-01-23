@@ -1,6 +1,11 @@
-
-observationlevels_data = readLines(system.file("apps/brapi/data/observationlevels.txt",
-                                               package = "brapiTS"))
+observationlevels_data = tryCatch({
+  res <- read.csv(system.file("apps/brapi/data/observationlevels.csv", package = "brapiTS"),
+                  stringsAsFactors = FALSE)
+  res[, 1]
+}, error = function(e) {
+  NULL
+}
+)
 
 observationlevels = list(
   metadata = list(

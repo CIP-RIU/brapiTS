@@ -1,8 +1,11 @@
-library(jug)
-library(jsonlite)
-
-variables_datatypes_data =
-  readLines(system.file("apps/brapi/data/variables_datatypes.txt", package = "brapiTS"))
+variables_datatypes_data = tryCatch({
+  res <- read.csv(system.file("apps/brapi/data/variables_datatypes.csv", package = "brapiTS"),
+                  stringsAsFactors = FALSE)
+  res[, 1]
+}, error = function(e) {
+  NULL
+}
+)
 
 variables_datatypes = list(
   metadata = list(
