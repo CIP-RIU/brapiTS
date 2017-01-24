@@ -1,7 +1,7 @@
 programDbId,name,abbreviation,objective,leadPerson
-1,CIPHQ,CIPHQ,Global Population Improvement,G. Leader
-2,Ghana,GHA,XYZ,M. Breeder
-3,Uganda,UGA,XYZ,W. Select
-4,Mozambique,MOZ,ABC,G. Gain
-5,NCSU,NCSU,Processing,C. Improvement
-6,Demo,DEMO,Demo,A. Test
+1,Program 1,P1,Global Population Improvement,G. Leader
+2,Program 2,P2,XYZ,M. Breeder
+3,Program 3,P3,XYZ,W. Select
+4,Program 4,P4,ABC,G. Gain
+5,Program 5,P5,Processing,C. Improvement
+6,Program 6,P6,Demo,A. Test
