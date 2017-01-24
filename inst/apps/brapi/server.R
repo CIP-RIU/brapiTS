@@ -45,7 +45,7 @@ res <- jug() %>%
   include(mw_variables_datatypes) %>%
   include(mw_variables_ontologies) %>%
   include(mw_variables) %>%
-  include(mw_variables_search) %>%
+  include(mw_observationVariables) %>%
   include(mw_maps) %>%
   include(mw_maps_details) %>%
   include(mw_maps_positions) %>%
