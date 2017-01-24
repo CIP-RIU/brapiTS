@@ -6,14 +6,32 @@ programs_data = tryCatch({
 }
 )
 
-programs_list = function(abbr = "none", prg = "none", page=0, pageSize = 100){
-  if(is.null(programs_data)) return(NULL)
-  if(abbr != "none"){
+programs_list = function(abbr = "any", prg = "any", page=0, pageSize = 100,
+                         programDbId = "any",
+                         objective = "any",
+                         leadPerson = "any"){
+  if (is.null(programs_data)) return(NULL)
+  if (abbr != "any") {
     programs_data = programs_data[programs_data$abbreviation == abbr, ]
     if(nrow(programs_data) == 0) return(NULL)
   }
 
-  if(prg != "none") {
+  if (programDbId != "any") {
+    programs_data = programs_data[programs_data$programDbId == programDbId, ]
+    if(nrow(programs_data) == 0) return(NULL)
+  }
+
+  if (leadPerson != "any") {
+    programs_data = programs_data[programs_data$leadPerson == leadPerson, ]
+    if(nrow(programs_data) == 0) return(NULL)
+  }
+
+  if (objective != "any") {
+    programs_data = programs_data[programs_data$objective == objective, ]
+    if(nrow(programs_data) == 0) return(NULL)
+  }
+
+  if (prg != "any") {
     programs_data = programs_data[programs_data$name == prg, ]
     if(nrow(programs_data) == 0) return(NULL)
   }
@@ -50,10 +68,19 @@ process_programs <- function(req, res, err){
   prms <- names(req$params)
   page = ifelse('page' %in% prms, as.integer(req$params$page), 0)
   pageSize = ifelse('pageSize' %in% prms, as.integer(req$params$pageSize), 100)
-  abbreviation = ifelse('abbreviation' %in% prms, req$params$abbreviation, "none")
-  programName = ifelse('programName' %in% prms, req$params$programName, "none")
+  abbreviation = ifelse('abbreviation' %in% prms, req$params$abbreviation, "any")
+  programName = ifelse('programName' %in% prms, req$params$programName, "any")
+  pname = ifelse('name' %in% prms, req$params$name, "any")
+  programName = ifelse(programName == "any", pname, programName)
 
-  programs$result$data = programs_list(abbreviation, programName, page, pageSize)
+  programDbId = ifelse('programDbId' %in% prms, req$params$programDbId, "any")
+  objective = ifelse('objective' %in% prms, req$params$objective, "any")
+  leadPerson = ifelse('leadPerson' %in% prms, req$params$leadPerson, "any")
+
+  programs$result$data = programs_list(abbreviation, programName, page, pageSize,
+                                       programDbId = programDbId,
+                                       objective = objective,
+                                       leadPerson = leadPerson)
   programs$metadata$pagination = attr(programs$result$data, "pagination")
 
   if(is.null(programs$result$data)){
@@ -73,8 +100,8 @@ mw_programs <<-
   put("/brapi/v1/programs[/]?", function(req, res, err){
     res$set_status(405)
   }) %>%
-  post("/brapi/v1/programs[/]?", function(req, res, err){
-    res$set_status(405)
+  post("/brapi/v1/programs-search[/]?", function(req, res, err){
+    process_programs(req, res, err)
   }) %>%
   delete("/brapi/v1/programs[/]?", function(req, res, err){
     res$set_status(405)

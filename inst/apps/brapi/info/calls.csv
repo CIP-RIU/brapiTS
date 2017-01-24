@@ -30,7 +30,7 @@ ObservationVariables,ACCEPTED,ontologies,json,GET,CORE,VariableOntologyList,obse
 ObservationVariables,ACCEPTED,variables-search,json,POST,CORE,VariableSearch,,,,,,,,
 Phenotypes,ACCEPTED,phenotypes-search,json,GET; POST,PHENOTYPING,PhenotypeSearch,,,,,,x,,
 Programs,ACCEPTED,programs,json,GET,CORE,ListPrograms,programs,x,x,,,x,,
-Programs,ACCEPTED,programs-search,json,POST,CORE,ProgramSearch,,,,,,,,
+Programs,ACCEPTED,programs-search,json,POST,CORE,ProgramSearch,,x,x,,,,,
 Studies,ACCEPTED,studies/id,json,GET,PHENOTYPING,StudyDetails,studies_details,x,x,,,x,,
 Studies,ACCEPTED,observationLevels,json,GET,PHENOTYPING,ListObservationLevels,studies_observationlevels,x,x,,,x,,
 Studies,ACCEPTED,studies/id/observations,json,GET,PHENOTYPING,GetObservationUnitsByObservationVariableId,studies_observations,x,x,,,x,,
