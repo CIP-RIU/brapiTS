@@ -26,6 +26,7 @@ res <- jug() %>%
   include(mw_markerprofiles) %>%
   include(mw_markerprofiles_id) %>%
   include(mw_allelematrix_search) %>%
+  include(mw_phenotypes_search) %>%
   include(mw_programs) %>%
   include(mw_crops) %>%
   include(mw_trials) %>%
