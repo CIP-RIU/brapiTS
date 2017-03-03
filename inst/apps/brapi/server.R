@@ -14,7 +14,9 @@ res <- jug() %>%
 
   # each 'include' corresponds to a first level path and corresponding path
   #include(mw_logs) %>%
+
   include(mw_calls) %>%
+  include(mw_token) %>%
   include(mw_germplasm_search) %>%
   include(mw_germplasm) %>%
   include(mw_germplasm_pedigree) %>%

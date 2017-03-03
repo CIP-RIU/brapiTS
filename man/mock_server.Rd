@@ -12,4 +12,3 @@ mock_server(port = 2021)
 \description{
 Starts a mock BrAPI server intended for local testing of brapi calls.
 }
-

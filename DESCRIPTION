@@ -1,6 +1,6 @@
 Package: brapiTS
 Title: Breeding API Test Server
-Version: 0.0.0.9000
+Version: 0.0.0.9010
 Authors@R: person("Reinhard", "Simon", email = "rsimon64@gmail.com", role = c("aut", "cre"))
 Description: A test server can be created to create fixture data according to
     the protocols and definitions from the Breeding API (BrAPI).
@@ -13,4 +13,4 @@ Imports:
     jug,
     magrittr,
     jsonlite
-RoxygenNote: 5.0.1
+RoxygenNote: 6.0.1
