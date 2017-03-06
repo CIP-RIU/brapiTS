@@ -53,19 +53,11 @@ process_samples_save <- function(req, res, err) {
     return(res)
   }
 
-  # token = ""
-  # try({
-  #   token <- req$headers$x_auth_token
-  # })
-  #
-  # if (!is.character(token)) return(set_err_msg(res, "Is not a string: access_token"))
-  # if (stringr::str_trim(token) == "") return(set_err_msg(res, "Has no value: access_token"))
-
   if (!('plotId' %in% prms)) return(set_err_msg(res, "Missing: plotId"))
   if (!('plantId' %in% prms)) return(set_err_msg(res, "Missing: plantId"))
   if (!('takenBy' %in% prms)) return(set_err_msg(res, "Missing: takenBy"))
   if (!('sampleDate' %in% prms)) return(set_err_msg(res, "Missing: sampleDate"))
-  if (!('sampleType' %in% prms)) return(rset_err_msg(res, "Missing: sampleType"))
+  if (!('sampleType' %in% prms)) return(set_err_msg(res, "Missing: sampleType"))
   if (!('tissueType' %in% prms)) return(set_err_msg(res, "Missing: tissueType"))
   if (!('notes' %in% prms)) return(set_err_msg(res, "Missing: notes"))
 

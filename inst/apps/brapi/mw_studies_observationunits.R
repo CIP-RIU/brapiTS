@@ -1,6 +1,7 @@
 
 studies_observationunits_data = tryCatch({
-  res <- read.csv(system.file("apps/brapi/data/studies_observations.csv", package = "brapi"),
+  res <- read.csv(system.file("apps/brapi/data/studies_observations.csv",
+                              package = "brapi"),
                   stringsAsFactors = FALSE)
   res
 }, error = function(e) {
@@ -93,6 +94,31 @@ process_studies_observationunits <- function(req, res, err){
 
 }
 
+process_studies_observationunits_save <- function(req, res, err) {
+  prms <- names(req$params)
+
+  set_err_msg <- function(res) {
+    msg <- list(
+      metadata = list(
+        status = list(list(
+          messge = "Could not update observation values. Invalid data.",
+          code = 27
+        ))))
+    res$set_status(500)
+    res$json(list(message = msg))
+    return(res)
+  }
+
+  if (!('metadata' %in% prms)) return(set_err_msg(res))
+  if (!('result' %in% prms)) return(set_err_msg(res))
+  if (!(exists('transactionDbId', where = req$params$result))) return(set_err_msg(res))
+  if (!(exists('commit', where = req$params$result))) return(set_err_msg(res))
+  #if (!(exists('data', where = req$params$result))) return(set_err_msg(res))
+
+  res$set_status(200)
+  res$json("Ok")
+  return(res)
+}
 
 mw_studies_observationunits <<-
   collector() %>%
@@ -103,7 +129,9 @@ mw_studies_observationunits <<-
     res$set_status(405)
   }) %>%
   post("/brapi/v1/studies/[0-9a-zA-Z]{1,12}/observationunits[/]?", function(req, res, err){
-    res$set_status(405)
+
+    process_studies_observationunits_save(req, res, err)
+
   }) %>%
   delete("/brapi/v1/studies/[0-9a-zA-Z]{1,12}/observationunits[/]?", function(req, res, err){
     res$set_status(405)
