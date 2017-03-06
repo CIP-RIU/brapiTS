@@ -124,6 +124,60 @@ process_studies_table_format <- function(req, res, err){
 }
 
 
+process_studies_table_save <- function(req, res, err) {
+  prms <- names(req$params)
+
+  set_err_msg <- function(res, msg) {
+    res$set_status(400)
+    status <- list(
+      metadata = list(
+        pagination = list(
+          pageSize = 0,
+          currentPage = 0,
+          totalCount = 0,
+          totalPages = 0
+        ),
+        status = list(code = 400, message = msg),
+        datafiles = list()
+      ),
+      result = list()
+    )
+    res$json(status)
+    return(res)
+  }
+
+  # token <- req$headers[2]
+  # print(token)
+
+  token = ""
+  try({
+    token <- req$headers$x_auth_token
+  })
+
+  # print(token)
+
+  #if (!('x_auth_token' %in% names(req$headers))) return(set_err_msg(res, "Missing: access_token"))
+  #print(paste0("at:", req$headers[2]))
+  if (!is.character(token)) return(set_err_msg(res, "Is not a string: access_token"))
+  if (stringr::str_trim(token) == "") return(set_err_msg(res, "Has no value: access_token"))
+  if (!('metadata' %in% prms)) return(set_err_msg(res, "Missing: metadata"))
+  if (!exists('pagination', where = req$params$metadata)) return(set_err_msg(res, "Missing: metadata.pagination"))
+  if (!exists('pageSize', where = req$params$metadata$pagination)) return(set_err_msg(res, "Missing: metadata.pagination.pageSize"))
+  if (!exists('currentPage', where = req$params$metadata$pagination)) return(set_err_msg(res, "Missing: metadata.pagination.currentPage"))
+  if (!exists('totalCount', where = req$params$metadata$pagination)) return(set_err_msg(res, "Missing: metadata.pagination.totalCount"))
+  if (!exists('totalPages', where = req$params$metadata$pagination)) return(set_err_msg(res, "Missing: metadata.pagination.totalPages"))
+  if (!exists('status', where = req$params$metadata)) return(set_err_msg(res, "Missing: metadata.status"))
+  if (!exists('datafiles', where = req$params$metadata)) return(set_err_msg(res, "Missing: metadata.datafiles"))
+
+  if (!('result' %in% prms)) return(set_err_msg(res, "Missing: result"))
+  if (!exists('headerRow', where = req$params$result)) return(set_err_msg(res, "Missing: result.headerRow"))
+  if (!exists('observationVariableDbIds', where = req$params$result)) return(set_err_msg(res, "Missing: result.observationVariableDbIds"))
+  if (!exists('data', where = req$params$result)) return(set_err_msg(res, "Missing: result.data"))
+
+  return(res$set_status(200))
+}
+
+
 mw_studies_table <<-
   collector() %>%
   get("/brapi/v1/studies/[0-9a-zA-Z]{1,12}/table[/]?", function(req, res, err){
@@ -141,7 +195,7 @@ mw_studies_table <<-
   })  %>%
 
   post("/brapi/v1/studies/[0-9a-zA-Z]{1,12}/table[/]?", function(req, res, err){
-    res$set_status(405)
+    process_studies_table_save(req, res, err)
   }) %>%
   delete("/brapi/v1/studies/[0-9a-zA-Z]{1,12}/table[/]?", function(req, res, err){
     res$set_status(405)

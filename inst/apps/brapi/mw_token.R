@@ -34,7 +34,10 @@ process_token <- function(req, res, err) {
 process_token_delete <- function(req, res, err) {
   prms <- names(req$params)
 
+  print(req$params)
+
   if(!('access_token' %in% prms)) return(res$set_status(401))
+  if(req$params$access_token == "") return(res$set_status(501))
   if(req$params$access_token != "") {
     out <- list(
       metadata = list(
@@ -53,6 +56,7 @@ process_token_delete <- function(req, res, err) {
     res$set_status(201)
     res$json(out)
   }
+  return(res$set_status(201))
 }
 
 mw_token <<-
