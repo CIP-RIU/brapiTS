@@ -22,8 +22,8 @@ phenotypes_search_list = function(
   ){
 
   if (germplasmDbId != "any") {
-    phenotypes_search_data <- phenotypes_search_data[phenotypes_search_data$studyDbId %in% studyDbId, ]
-    if(nrow(observationVariables_data) == 0) return(NULL)
+    phenotypes_search_data <- phenotypes_search_data[phenotypes_search_data$germplasmDbId %in% germplasmDbId, ]
+    if(nrow(phenotypes_search_data) == 0) return(NULL)
   }
 
 
@@ -32,13 +32,61 @@ phenotypes_search_list = function(
   phenotypes_search_data <- phenotypes_search_data[pg$recStart:pg$recEnd, ]
 
 
-  n = nrow(phenotypes_search_data)
+  ouid = unique(phenotypes_search_data$observationUnitDbId)
 
+  n = length(ouid)
+  #message(n)
   out = list(n)
 
+  pg$pagination$totalCount = n
+
   for(i in 1:n){
-    out[[i]] <- as.list(phenotypes_search_data[i, ])
+    odat = phenotypes_search_data[phenotypes_search_data$observationUnitDbId == ouid[i], ]
+    #odat = phenotypes_search_data
+    #odat1 = odat[1, ]
+
+    out[[i]] <- as.list(odat[1,
+                              c("observationUnitDbId", "observationLevel", "observationLevels",
+                                "plotNumber", "plantNumber", "blockNumber", "replicate",
+
+                                "observationUnitName", "germplasmDbId", "germplasmName",
+                                "studyDbId", "studyName", "studyLocationDbId", "studyLocation",
+                                "programName", "X", "Y",
+                                "entryNumber", "entryType"
+                                ) ])
+
+    trts <- list()
+    if (odat$factor != "") {
+      trts <- as.list(odat[1, c("factor", "modality")])
+    }
+    out[[i]]$treatments <- trts
+
+
+
+    obid = unique(odat$observationVariableDbId)
+    m = nrow(odat)
+    obs = list(m)
+    for (j in 1:m) {
+      obs[[j]] <- as.list(odat[odat$observationVariableDbId == obid[j],
+                               c("observationDbId", "observationVariableDbId", "observationVariableName",
+                                 "observationTimestamp", "season", "operator", "value")])
+      names(obs[[j]])[6] = c("observationTimeStamp")
+      names(obs[[j]])[4] = c("collector")
+    }
+    out[[i]]$observations = obs
+
+
   }
+
+
+
+  # n = nrow(phenotypes_search_data)
+  #
+  # out = list(n)
+  #
+  # for(i in 1:n){
+  #   out[[i]] <- as.list(phenotypes_search_data[i, ])
+  # }
 
   attr(out, "status") = list()
   attr(out, "pagination") = pg$pagination
