@@ -21,9 +21,47 @@ phenotypes_search_list = function(
   page = 0
   ){
 
+
   if (germplasmDbId != "any") {
-    phenotypes_search_data <- phenotypes_search_data[phenotypes_search_data$germplasmDbId %in% germplasmDbId, ]
+    phenotypes_search_data <- phenotypes_search_data[phenotypes_search_data$germplasmDbId %in%
+                                                       germplasmDbId, ]
     if(nrow(phenotypes_search_data) == 0) return(NULL)
+  }
+
+  if (observationVariableDbId != "any") {
+    phenotypes_search_data <- phenotypes_search_data[phenotypes_search_data$observationVariableDbId %in%
+                                                       observationVariableDbId, ]
+    if(nrow(phenotypes_search_data) == 0) return(NULL)
+  }
+
+  if (studyDbId != "any") {
+    phenotypes_search_data <- phenotypes_search_data[phenotypes_search_data$studyDbId %in%
+                                                       studyDbId, ]
+    if (nrow(phenotypes_search_data) == 0) return(NULL)
+  }
+
+  if (locationDbId != "any") {
+    phenotypes_search_data <- phenotypes_search_data[phenotypes_search_data$locationDbId %in%
+                                                       locationDbId, ]
+    if (nrow(phenotypes_search_data) == 0) return(NULL)
+  }
+
+  if (programDbId != "any") {
+    phenotypes_search_data <- phenotypes_search_data[phenotypes_search_data$programDbId %in%
+                                                       programDbId, ]
+    if (nrow(phenotypes_search_data) == 0) return(NULL)
+  }
+
+  if (seasonDbId != "any") {
+    phenotypes_search_data <- phenotypes_search_data[phenotypes_search_data$seasonDbId %in%
+                                                       seasonDbId, ]
+    if (nrow(phenotypes_search_data) == 0) return(NULL)
+  }
+
+  if (observationLevel != "any") {
+    phenotypes_search_data <- phenotypes_search_data[phenotypes_search_data$observationLevel %in%
+                                                       observationLevel, ]
+    if (nrow(phenotypes_search_data) == 0) return(NULL)
   }
 
 
@@ -78,16 +116,6 @@ phenotypes_search_list = function(
 
   }
 
-
-
-  # n = nrow(phenotypes_search_data)
-  #
-  # out = list(n)
-  #
-  # for(i in 1:n){
-  #   out[[i]] <- as.list(phenotypes_search_data[i, ])
-  # }
-
   attr(out, "status") = list()
   attr(out, "pagination") = pg$pagination
 
@@ -114,14 +142,31 @@ phenotypes_search = list(
 process_phenotypes_search <- function(req, res, err){
   prms <- names(req$params)
 
-  germplasmDbId = ifelse('germplasmDbIds' %in% prms, req$params$germplasmDbIds, "any")
+  germplasmDbId = "any"
+  if ('germplasmDbIds' %in% prms) {
+    germplasmDbId <- req$params$germplasmDbIds %>%  paste(collapse = ";") %>% safe_split()
+  }
+  observationVariableDbId = "any"
+  if ('observationVariableDbIds' %in% prms) {
+    observationVariableDbId <- req$params$observationVariableDbIds %>%  paste(collapse = ";") %>% safe_split()
+  }
+  studyDbId = "any"
+  if ('studyDbIds' %in% prms) {
+    studyDbId <- req$params$studyDbIds %>%  paste(collapse = ";") %>% safe_split()
+  }
+  locationDbId = "any"
+  if ('locationDbIds' %in% prms) {
+    locationDbId <- req$params$locationDbIds %>%  paste(collapse = ";") %>% safe_split()
+  }
+  programDbId = "any"
+  if ('programDbIds' %in% prms) {
+    programDbId <- req$params$programDbIds %>%  paste(collapse = ";") %>% safe_split()
+  }
+  seasonDbId = "any"
+  if ('seasonDbIds' %in% prms) {
+    seasonDbId <- req$params$seasonDbIds %>%  paste(collapse = ";") %>% safe_split()
+  }
 
-  observationVariableDbId = ifelse('observationVariableDbIds' %in% prms, req$params$observationVariableDbIds, "any")
-  studyDbId = ifelse('studyDbIds' %in% prms, req$params$studyDbIds, "any")
-  locationDbId = ifelse('locationDbIds' %in% prms, req$params$locationDbIds, "any")
-
-  programDbId = ifelse('programDbIds' %in% prms, req$params$programDbIds, "any")
-  seasonDbId = ifelse('seasonDbIds' %in% prms, req$params$seasonDbIds, "any")
   observationLevel = ifelse('observationLevel' %in% prms, req$params$observationLevel, "any")
 
   pageSize = ifelse('pageSize' %in% prms, as.integer(req$params$pageSize), 100)

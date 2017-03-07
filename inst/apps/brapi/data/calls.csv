@@ -29,6 +29,7 @@ variables/datatypes,json,GET
 variables/id,json,GET
 ontologies,json,GET
 variables-search,json,POST
+phenotypes-search,json,POST
 programs,json,GET
 programs-search,json,POST
 samples,json,PUT
