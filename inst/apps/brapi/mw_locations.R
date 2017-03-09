@@ -33,7 +33,7 @@ locations_list = function(locationType = "all", page = 0, pageSize = 100){
   n = nrow(locations_data)
   out = list(n)
   for(i in 1:n){
-    out[[i]] <- locations_data[i, ]
+    out[[i]] <- as.list(locations_data[i, ])
     additionalInfo =
        locations_additionalInfo_data[locations_additionalInfo_data$locationDbId == i,
                                      -c(1)]
