@@ -1,4 +1,6 @@
 
+# utils/get_germplasm.R
+
 process_germplasm_pedigree <- function(req, res, err){
   prms <- names(req$params)
   notation = ifelse('notation' %in% prms, req$params$notation, "purdue")

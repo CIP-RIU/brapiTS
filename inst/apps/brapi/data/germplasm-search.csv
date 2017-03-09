@@ -1,4 +1,4 @@
-germplasmDbId,defaultDisplayName,accessionNumber,germplasmName,germplasmPUI,pedigree,germplasmSeedSource,synonyms,commonCropName,instituteCode,instituteName,biologicalStatusOfAccessionCode,countryOfOriginCode,typeOfGermplasmStorageCode,genus,species,speciesAuthority,subtaxa,subtaxaAuthority,donors,acquisitionDate
+germplasmDbId,defaultDisplayName,accessionNumber,germplasmName,germplasmPUI,pedigree,seedSource,synonyms,commonCropName,instituteCode,instituteName,biologicalStatusOfAccessionCode,countryOfOriginCode,typeOfGermplasmStorageCode,genus,species,speciesAuthority,subtaxa,subtaxaAuthority,donors,acquisitionDate
 1,G000001,A000001,Name001,http://pui.per/accession/A000001,landrace,open pollination,landrace 1,new crop,PER001,INST,300,BRA,13,Fructus,novus,L,,,1,19840101
 2,G000002,A000002,Name002,http://pui.per/accession/A000002,landrace,open pollination,landrace 2,new crop,PER001,INST,300,ECU,20,Fructus,novus,L,,,2,19840101
 3,G000003,A000003,Name003,http://pui.per/accession/A000003,A000001 / A000002,A000001/A000002,variety 1,new crop,PER001,INST,500,PER,12,Fructus,novus,L,,,3,20010101
