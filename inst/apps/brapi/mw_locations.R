@@ -75,7 +75,7 @@ process_locations <- function(req, res, err){
   locationType = ifelse('locationType' %in% prms, req$params$locationType, "all")
 
 
-  locations$result = locations_list(locationType, page, pageSize)
+  locations$result = list(data = locations_list(locationType, page, pageSize))
   locations$metadata = list(pagination = attr(locations$result, "pagination"),
                                        status = attr(locations$result, "status"),
                                        datafiles = list())
