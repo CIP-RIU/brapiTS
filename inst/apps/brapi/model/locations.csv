@@ -1,0 +1,18 @@
+locationDbId,locationType,name,abbreviation,countryCode,countryName,latitude,longitude,altitude
+1,Storage location,Location 1,L1,PER,Peru,-11.1275,-75.356389,828
+2,Breeding location,Location 2,L2,PER,Peru,-11.16116,-75.34171,964
+3,Storage location,Location 3,L3,PER,Peru,-12.076289,-76.948417,244
+4,Farmer field location,Location 4,L4,MOZ,Mozambique,-15.4669,36.9777,701
+5,Breeding location,Location 5,L5,MOZ,Mozambique,-26.0283,32.39,7
+6,Breeding location,Location 6,L6,PER,Peru,-10.96096,-75.22065,717
+7,Breeding location,Location 7,L7,PER,Peru,-10.931809,-74.855467,484
+8,Farmer field location,Location 8,L8,PER,Peru,-11.05304,-73.75254,252
+9,Farmer field location,Location 9,L9,PER,Peru,-11.05304,-73.75254,252
+10,Breeding location,Location 10,L10,PER,Peru,-11.25847,-73.82075,276
+11,Breeding location,Location 11,L11,PER,Peru,-11.14639,-74.30748,323
+12,Breeding location,Location 12,L12,PER,Peru,-11.30817,-74.69242,758
+13,Farmer field location,Location 13,L13,GHA,Ghana,6.71,-1.572,288
+14,Farmer field location,Location 14,L14,GHA,Ghana,5.123,-1.462,26
+15,Farmer field location,Location 15,L15,GHA,Ghana,10.87,-1.1466,183
+16,Storage location,Location 16,L16,UGA,Uganda,0.529144,32.61246,1173
+17,Storage location,Location 17,L17,UGA,Uganda,1.528,33.616,1067
