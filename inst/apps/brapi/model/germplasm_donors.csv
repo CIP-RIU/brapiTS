@@ -1,7 +1,10 @@
-germplasmDbId,donorAccessionNumber,donorInstituteCode,germplasmPUI
-1,BRA001001,BRA001,http://pui.bra/accession/BRA001001
-2,ECU001001,ECU001,http://pui.ecu/accession/ECU001001
-3,A000003,PER001,http://pui.per/accession/A000003
-4,A000004,PER001,http://pui.per/accession/A000004
-5,ECU001002,ECU002,http://pui.ecu/accession/ECU001002
-5,PER002001,PER002,http://puiper/accession/PER002001
+germplasmDbId,countryOfOriginCode,donorAccessionNumber,donorInstituteCode,germplasmPUI
+1,BRA,BRA001001,BRA001,http://pui.bra/accession/BRA001001
+2,ECU,ECU001001,ECU001,http://pui.ecu/accession/ECU001001
+3,PER,PER000003,PER001,http://pui.per/accession/PER000003
+4,PER,PER000004,PER001,http://pui.per/accession/PER000004
+5,ECU,ECU001002,ECU002,http://pui.ecu/accession/ECU001002
+6,PER,PER002001,PER002,http://pui.per/accession/PER002001
+7,PER,PER002002,PER002,http://pui.per/accession/PER002002
+8,PER,PER002003,PER002,http://pui.per/accession/PER002003
+9,PER,PER002004,PER002,http://pui.per/accession/PER002004

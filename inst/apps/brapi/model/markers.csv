@@ -1,6 +1,41 @@
 markerDbId,defaultDisplayName,type,synonyms,refAlt,analysisMethods
-1,a_01_10001,SNP,i_01_10001; popA_10001,A;T,illumina
-2,A_01_10002,SNP,i_01_10001; popA_10002,G;C,illumina
-3,b_02_10003,Dart,i_02_10001; popA_10003,C;G,kasp
-4,B_02_10004,Dart,i_02_10001; popA_10004,T;A,kasp
-5,C_11_10005,SNP,i_11_10001; popA_10005,T;A,illumina;kasp
+1,m1,SNP,i_01_10001; popA_10001,A;T,illumina
+2,m2,SNP,i_01_10001; popA_10002,G;C,illumina
+3,m3,Dart,i_02_10001; popA_10003,C;G,kasp
+4,m4,Dart,i_02_10001; popA_10004,T;A,kasp
+5,m5,SNP,i_11_10001; popA_10005,T;A,illumina;kasp
+6,m6,SNP,,T;A,illumina
+7,m7,SNP,,T;A,illumina
+8,m8,SNP,,T;A,illumina
+9,m9,SNP,,T;A,illumina
+10,m10,SNP,,T;A,illumina
+11,m11,SNP,,T;A,illumina
+12,m12,SNP,,T;A,illumina
+13,m13,SNP,,T;A,illumina
+14,m14,SNP,,T;A,illumina
+15,m15,SNP,,T;A,illumina
+16,m16,SNP,,T;A,illumina
+17,m17,SNP,,T;A,illumina
+18,m18,SNP,,T;A,illumina
+19,m19,SNP,,T;A,illumina
+20,m20,SNP,,T;A,illumina
+21,m21,SNP,,T;A,illumina
+21,m22,SNP,,T;A,illumina
+21,m23,SNP,,T;A,illumina
+21,m24,SNP,,T;A,illumina
+21,m25,SNP,,T;A,illumina
+21,m26,SNP,,T;A,illumina
+21,m27,SNP,,T;A,illumina
+21,m28,SNP,,T;A,illumina
+21,m29,SNP,,T;A,illumina
+21,m30,SNP,,T;A,illumina
+21,m31,SNP,,T;A,illumina
+21,m32,SNP,,T;A,illumina
+21,m33,SNP,,T;A,illumina
+21,m34,SNP,,T;A,illumina
+21,m35,SNP,,T;A,illumina
+21,m36,SNP,,T;A,illumina
+21,m37,SNP,,T;A,illumina
+21,m38,SNP,,T;A,illumina
+21,m39,SNP,,T;A,illumina
+21,m40,SNP,,T;A,illumina

@@ -1,6 +1,6 @@
 
 process_germplasm <- function(req, res, err){
-  germplasmDbId <- as.integer(basename(req$path))
+  germplasmDbId <- basename(req$path)
 
   germplasm_search$result$data = germplasm_search_list(germplasmDbId)
   germplasm_search$metadata = list(pagination = NULL, status = NULL,
