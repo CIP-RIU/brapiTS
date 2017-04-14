@@ -4,7 +4,8 @@
 # source(system.file("apps/brapi/utils/paging.R", package = "brapi"))
 
 germplasm_search_data = tryCatch({
-  x <- read.csv(system.file("apps/brapi/data/germplasm-search.csv", package = "brapi"), stringsAsFactors = FALSE)
+  x <- read.csv(system.file("apps/brapi/data/germplasm-search.csv", package = "brapiTS"),
+                stringsAsFactors = FALSE)
   x <- sapply(x, function(x) ifelse(is.na(x), "", x))
   x <- x %>% as.data.frame(stringsAsFactors = FALSE)
   x$germplasmDbId <- as.integer(x$germplasmDbId)
@@ -20,7 +21,8 @@ germplasm_search_data = tryCatch({
 
 # TODO add donor info!
 germplasm_donor = tryCatch({
-  x <- read.csv(system.file("apps/brapi/data/germplasm_donors.csv", package = "brapi"), stringsAsFactors = FALSE)
+  x <- read.csv(system.file("apps/brapi/data/germplasm_donors.csv",
+                            package = "brapiTS"), stringsAsFactors = FALSE)
   x <- sapply(x, function(x) ifelse(is.na(x), "", x))
   x <- x %>% as.data.frame(stringsAsFactors = FALSE)
   x

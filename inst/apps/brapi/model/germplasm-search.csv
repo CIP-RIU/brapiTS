@@ -1,12 +1,10 @@
-germplasmDbId,defaultDisplayName,accessionNumber,germplasmName,germplasmPUI,pedigree,seedSource,synonyms,commonCropName,instituteCode,instituteName,biologicalStatusOfAccessionCode,countryOfOriginCode,typeOfGermplasmStorageCode,genus,species,speciesAuthority,subtaxa,subtaxaAuthority,donors,acquisitionDate
-1,G000001,A000001,Name001,http://pui.per/accession/A000001,landrace,open pollination,landrace 1,new crop,PER001,INST,300,BRA,13,Fructus,novus,L,,,1,19840101
-2,G000002,A000002,Name002,http://pui.per/accession/A000002,landrace,open pollination,landrace 2,new crop,PER001,INST,300,ECU,20,Fructus,novus,L,,,2,19840101
-3,G000003,A000003,Name003,http://pui.per/accession/A000003,A000001 / A000002,A000001/A000002,variety 1,new crop,PER001,INST,500,PER,12,Fructus,novus,L,,,3,20010101
-4,G000004,A000004,Name004,http://pui.per/accession/A000004,A000002 / A000001,A000002/A000001,variety 2,new crop,PER001,INST,500,PER,12,Fructus,novus,L,,,4,20010101
-5,G000005,A000005,Name005,http://pui.per/accession/A000005,landrace,open pollination,landrace 3,new crop,PER001,INST,300,ECU,20,Fructus,novus,L,,,5,19910101
-101,ZIPA_68,B000001,ZIPA_68,,,,variety 4,new crop,PER002,INST,500,PER,12,Fructus,novus,L,,,,
-102,ZIPA_69,B000002,ZIPA_69,,,,variety 5,new crop,PER003,INST,500,PER,12,Fructus,novus,L,,,,
-201,ABCD_52,B000003,ABCD_52,,,,variety 6,new crop,PER004,INST,500,PER,12,Fructus,novus,L,,,,
-202,ABCD_53,B000004,ABCD_53,,,,variety 7,new crop,PER005,INST,500,PER,12,Fructus,novus,L,,,,
-203,ABCD_54,B000005,ABCD_54,,,,variety 8,new crop,PER006,INST,500,PER,12,Fructus,novus,L,,,,
-999,Local_variety,B000006,Local_variety,,,,landrace,new crop,PER007,INST,300,PER,13,Fructus,novus,L,,,,
+germplasmDbId,defaultDisplayName,accessionNumber,germplasmName,germplasmPUI,pedigree,seedSource,synonyms,commonCropName,instituteCode,instituteName,biologicalStatusOfAccessionCode,typeOfGermplasmStorageCode,genus,species,speciesAuthority,subtaxa,subtaxaAuthority,donors,acquisitionDate
+1,G000001,A000001,Name001,http://pui.per/accession/A000001,landrace,open pollination,landrace 1,crop1,PER001,INST1,300,13,Fructus,novus,L,,,1,19840101
+2,G000002,A000002,Name002,http://pui.per/accession/A000002,landrace,open pollination,landrace 2,crop1,PER001,INST1,300,20,Fructus,novus,L,,,2,19840101
+3,G000003,A000003,Name003,http://pui.per/accession/A000003,A000001 / A000002,A000001/A000002,variety 1,crop1,PER001,INST1,500,12,Fructus,novus,L,,,3,20010101
+4,G000004,A000004,Name004,http://pui.per/accession/A000004,,,variety 4,crop1,PER001,INST1,500,12,Fructus,novus,L,,,4,20010101
+5,G000005,A000005,Name005,http://pui.per/accession/A000005,,,variety 5,crop1,PER001,INST1,500,12,Fructus,novus,L,,,5,20010101
+6,G000006,A000006,Name006,http://pui.per/accession/A000006,,,variety 6,crop1,PER001,INST1,500,12,Fructus,novus,L,,,6,20010101
+7,G000007,A000007,Name007,http://pui.per/accession/A000007,,,variety 7,crop1,PER001,INST1,500,12,Fructus,novus,L,,,7,20010101
+8,G000008,A000008,Name008,http://pui.per/accession/A000008,,,variety 8,crop1,PER001,INST1,500,12,Fructus,novus,L,,,8,20010101
+9,Local_variety,A000009,Local_variety,http://pui.per/accession/A000009,landrace,open pollination,landrace,crop1,PER001,INST1,300,13,Fructus,novus,L,,,9,20010101

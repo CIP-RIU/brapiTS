@@ -1,10 +1,10 @@
 attributeDbId,code,uri,name,description,attributeCategoryDbId,datatype,values
 1,RHT,http://www.brapi.org/ontology/MO_123:1000001,Rht-B1b,Allele of marker 11_4769,2,Categorical,Present;Absent;Heterozygous
-2,WEV,http://www.brapi.org/ontology/MO_123:1000002,Weevil Resistance,Resistance allele,3,Categorical,1:9
+2,WEV,http://www.brapi.org/ontology/MO_123:1000002,Weevil Resistance,Resistance allele,3,Categorical,1;2;3;4;5;6;7;8;9
 3,FLSHORG,http://www.brapi.org/ontology/MO_123:1000003,Flesh Color Orange allele,Allelele for orange flesh,1,Categorical,1;3;5;7;9
 4,FLWCOL,http://www.brapi.org/ontology/MO_123:1000004,Flower color white allele,Allele for white flower color,1,Categorical,Present;Absent;Heterozygous
-5,RAL1,http://www.brapi.org/ontology/MO_123:1000005,R allele 1,Resistance allele 1,3,Categorical,1;3;5;7;9
-6,RAL2,http://www.brapi.org/ontology/MO_123:1000006,R allele 2,Resistance allele 2,3,Categorical,1;3;5;7;9
-7,RAL3,http://www.brapi.org/ontology/MO_123:1000007,R allele 3,Resistance allele 3,3,Categorical,1;3;5;7;9
-8,RAL4,http://www.brapi.org/ontology/MO_123:1000008,R allele 4,Resistance allele 4,4,Categorical,1;3;5;7;9
-9,RAL5,http://www.brapi.org/ontology/MO_123:1000009,R allele 5,Resistance allele 5,4,Categorical,1;3;5;7;9
+5,RAL1,http://www.brapi.org/ontology/MO_123:1000005,R allele 1,Resistance allele 1,3,Categorical,1;2;3;4;5;6;7;8;9
+6,RAL2,http://www.brapi.org/ontology/MO_123:1000006,R allele 2,Resistance allele 2,3,Categorical,1;2;3;4;5;6;7;8;9
+7,RAL3,http://www.brapi.org/ontology/MO_123:1000007,R allele 3,Resistance allele 3,3,Categorical,1;2;3;4;5;6;7;8;9
+8,RAL4,http://www.brapi.org/ontology/MO_123:1000008,R allele 4,Resistance allele 4,4,Categorical,1;2;3;4;5;6;7;8;9
+9,RAL5,http://www.brapi.org/ontology/MO_123:1000009,R allele 5,Resistance allele 5,4,Categorical,1;2;3;4;5;6;7;8;9

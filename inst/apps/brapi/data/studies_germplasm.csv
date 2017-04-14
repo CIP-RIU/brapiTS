@@ -1,19 +1,19 @@
 studyDbId,trialName,germplasmDbId,entryNumber,germplasmName,pedigree,seedSource,accessionNumber,germplasmPUI,synonyms
-1001,Peru Yield Trial 1,101,1,ZIPA_68,,,B000001,,variety 4
-1001,Peru Yield Trial 1,102,2,ZIPA_69,,,B000001,,variety 5
-1001,Peru Yield Trial 1,999,3,Local_variety,,,B000006,,landrace
-1001,Peru Yield Trial 1,101,4,ZIPA_68,,,B000001,,variety 4
-1001,Peru Yield Trial 1,102,5,ZIPA_69,,,B000001,,variety 5
-1001,Peru Yield Trial 1,999,6,Local_variety,,,B000006,,landrace
-1002,Peru Yield Trial 2,201,1,ABCD_52,,,B000003,,variety 6
-1002,Peru Yield Trial 2,202,2,ABCD_53,,,B000004,,variety 7
-1002,Peru Yield Trial 2,203,3,ABCD_54,,,B000005,,variety 8
-1002,Peru Yield Trial 2,999,4,Local_variety,,,B000006,,landrace
-1002,Peru Yield Trial 2,999,5,Local_variety,,,B000006,,landrace
-1002,Peru Yield Trial 2,202,6,ABCD_53,,,B000004,,variety 7
-1002,Peru Yield Trial 2,201,7,ABCD_52,,,B000003,,variety 6
-1002,Peru Yield Trial 2,203,8,ABCD_54,,,B000005,,variety 8
-1002,Peru Yield Trial 2,203,9,ABCD_54,,,B000005,,variety 8
-1002,Peru Yield Trial 2,201,10,ABCD_52,,,B000003,,variety 6
-1002,Peru Yield Trial 2,202,11,ABCD_53,,,B000004,,variety 7
-1002,Peru Yield Trial 2,999,12,Local_variety,,,B000006,,landrace
+1001,Peru Yield Trial 1,1,1,ZIPA_68,,,B000001,,variety 4
+1001,Peru Yield Trial 1,2,2,ZIPA_69,,,B000001,,variety 5
+1001,Peru Yield Trial 1,9,3,Local_variety,,,B000006,,landrace
+1001,Peru Yield Trial 1,1,4,ZIPA_68,,,B000001,,variety 4
+1001,Peru Yield Trial 1,2,5,ZIPA_69,,,B000001,,variety 5
+1001,Peru Yield Trial 1,9,6,Local_variety,,,B000006,,landrace
+1002,Peru Yield Trial 2,3,1,ABCD_52,,,B000003,,variety 6
+1002,Peru Yield Trial 2,4,2,ABCD_53,,,B000004,,variety 7
+1002,Peru Yield Trial 2,5,3,ABCD_54,,,B000005,,variety 8
+1002,Peru Yield Trial 2,9,4,Local_variety,,,B000006,,landrace
+1002,Peru Yield Trial 2,9,5,Local_variety,,,B000006,,landrace
+1002,Peru Yield Trial 2,7,6,ABCD_53,,,B000004,,variety 7
+1002,Peru Yield Trial 2,6,7,ABCD_52,,,B000003,,variety 6
+1002,Peru Yield Trial 2,5,8,ABCD_54,,,B000005,,variety 8
+1002,Peru Yield Trial 2,3,9,ABCD_54,,,B000005,,variety 8
+1002,Peru Yield Trial 2,4,10,ABCD_52,,,B000003,,variety 6
+1002,Peru Yield Trial 2,1,11,ABCD_53,,,B000004,,variety 7
+1002,Peru Yield Trial 2,9,12,Local_variety,,,B000006,,landrace
