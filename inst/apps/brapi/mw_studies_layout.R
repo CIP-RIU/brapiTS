@@ -11,7 +11,8 @@ studies_layout_data = tryCatch({
 )
 
 studies_layout_additionalInfo_data = tryCatch({
-  res <- read.csv(system.file("apps/brapi/data/studies_layout_additionalInfo.csv", package = "brapi"),
+  res <- read.csv(system.file("apps/brapi/data/studies_layout_additionalInfo.csv",
+                              package = "brapiTS"),
                   stringsAsFactors = FALSE)
 }, error = function(e) {
   NULL

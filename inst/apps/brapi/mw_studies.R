@@ -10,7 +10,7 @@ studiesid_data = tryCatch({
 )
 
 studiesid_additionalInfo_data = tryCatch({
-  res <- read.csv(system.file("apps/brapi/data/studies_additionalinfo.csv", package = "brapi"),
+  res <- read.csv(system.file("apps/brapi/data/studies_additionalinfo.csv", package = "brapiTS"),
                   stringsAsFactors = FALSE)
 }, error = function(e) {
   NULL
@@ -18,7 +18,7 @@ studiesid_additionalInfo_data = tryCatch({
 )
 
 studiesid_contacts_data = tryCatch({
-  res <- read.csv(system.file("apps/brapi/data/contacts.csv", package = "brapi"),
+  res <- read.csv(system.file("apps/brapi/data/contacts.csv", package = "brapiTS"),
                   stringsAsFactors = FALSE)
   res
 }, error = function(e) {
@@ -28,7 +28,7 @@ studiesid_contacts_data = tryCatch({
 
 
 locations1_data = tryCatch({
-  res <- read.csv(system.file("apps/brapi/data/locations.csv", package = "brapi"),
+  res <- read.csv(system.file("apps/brapi/data/locations.csv", package = "brapiTS"),
                   stringsAsFactors = FALSE)
 }, error = function(e) {
   NULL
@@ -37,7 +37,7 @@ locations1_data = tryCatch({
 
 
 locations1_additionalInfo_data = tryCatch({
-  res <- read.csv(system.file("apps/brapi/data/locations_additionalinfo.csv", package = "brapi"),
+  res <- read.csv(system.file("apps/brapi/data/locations_additionalinfo.csv", package = "brapiTS"),
                   stringsAsFactors = FALSE)
 }, error = function(e) {
   NULL
@@ -56,7 +56,7 @@ studies_list = function(studyDbId = "any"){
     additionalInfoL =
       locations1_additionalInfo_data[locations1_additionalInfo_data$locationDbId == out$locationDbId,
                                     -c(1)]
-    if(nrow(additionalInfoL) == 0) {
+    if(is.null(additionalInfoL)) {
       additionalInfoL = NULL
     } else {
       additionalInfoL = additionalInfoL[, !is.na(additionalInfoL)  %>% as.logical() ] %>% as.list
@@ -75,19 +75,24 @@ studies_list = function(studyDbId = "any"){
     contact_s = safe_split(studiesid_data[i, "contactDbId"], ";")
     out$contactDbId <- NULL
     out$contacts <- list(as.list(NULL))
-    if(all(contact_s != "")){
+    if(all(contact_s != "")) {
       studiesid_contacts_data = studiesid_contacts_data[studiesid_contacts_data$contactDbId %in% contact_s,  ]
       contacts = list(nrow(studiesid_contacts_data))
-      for(j in 1:nrow(studiesid_contacts_data)){
-        contacts[[j]] <- as.list(studiesid_contacts_data[j, ])
+      if(!is.null(contacts[[1]])){
+        for(j in 1:nrow(studiesid_contacts_data)){
+          contacts[[j]] <- as.list(studiesid_contacts_data[j, ])
+        }
+      } else {
+        contacts <- jsonlite::fromJSON("[]")
       }
+
       out$contacts <- contacts
     }
 
     additionalInfo =
       studiesid_additionalInfo_data[studiesid_additionalInfo_data$studyDbId == studiesid_data$studyDbId[i],
                                     -c(1)]
-    if(nrow(additionalInfo) == 0) {
+    if(length(additionalInfo) == 0) {
       additionalInfo = NULL
     } else {
       additionalInfo = additionalInfo[, !is.na(additionalInfo)  %>% as.logical() ]

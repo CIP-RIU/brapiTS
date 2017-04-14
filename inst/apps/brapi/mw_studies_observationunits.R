@@ -1,7 +1,7 @@
 
 studies_observationunits_data = tryCatch({
   res <- read.csv(system.file("apps/brapi/data/studies_observations.csv",
-                              package = "brapi"),
+                              package = "brapiTS"),
                   stringsAsFactors = FALSE)
   res
 }, error = function(e) {

@@ -1,6 +1,7 @@
 
 seasons_data = tryCatch({
-  read.csv(system.file("apps/brapi/data/seasons.csv", package = "brapiTS"), stringsAsFactors = FALSE)
+  read.csv(system.file("apps/brapi/data/seasons.csv", package = "brapiTS"),
+           stringsAsFactors = FALSE)
 }, error = function(e){
   NULL
 }
