@@ -60,7 +60,9 @@ names(gplsch)[5] <- "germplasmPUI"
 readr::write_csv(gplsch, "../../data/germplasm-search.csv")
 
 #location
-file.copy("../lcoation.csv", "../../data/lcoation.csv",
+file.copy("../locations.csv", "../../data/locations.csv",
+          overwrite = TRUE)
+file.copy("../locations_additionalInfo.csv", "../../data/lcoations_additionalInfo.csv",
           overwrite = TRUE)
 
 #maps
