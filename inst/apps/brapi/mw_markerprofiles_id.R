@@ -17,7 +17,7 @@ markerprofiles_id_alleles_data = tryCatch({
 
 
 markerprofiles_id_list = function(#germplasmDbId = 0,
-  markerprofilesDbId = 0,
+  germplasmDbId = "",
             unknownString = "empty_string", expandHomozygotes = TRUE,
             sepPhased ="empty_string", sepUnphased ="empty_string",
                         page = 0, pageSize = 1000){
@@ -25,14 +25,14 @@ markerprofiles_id_list = function(#germplasmDbId = 0,
   # markerprofiles_id_data <- markerprofiles_id_data[markerprofiles_id_data$germplasmDbId == germplasmDbId, ]
   # if(nrow(markerprofiles_id_data) == 0) return(NULL)
 
-  if(markerprofilesDbId > 0){
-    markerprofiles_id_data <- markerprofiles_id_data[markerprofiles_id_data$markerProfilesDbId == markerprofilesDbId, ]
+  if(germplasmDbId != ""){
+    markerprofiles_id_data <- markerprofiles_id_data[markerprofiles_id_data$germplasmDbId == germplasmDbId, ]
   }
   if(nrow(markerprofiles_id_data) == 0) return(NULL)
-  if(!any(markerprofilesDbId == markerprofiles_id_alleles_data$markerprofilesDbId)) return(NULL)
+  if(!any(markerprofiles_id_data$markerProfileDbId == markerprofiles_id_alleles_data$markerprofilesDbId)) return(NULL)
 
   # paging here after filtering
-  x <- markerprofiles_id_alleles_data[markerprofiles_id_alleles_data$markerprofilesDbId == markerprofilesDbId, 3:4]
+  x <- markerprofiles_id_alleles_data[markerprofiles_id_data$markerProfileDbId == markerprofiles_id_alleles_data$markerprofilesDbId, 3:4]
 
   pg = paging(x, page, pageSize)
   x <- x[pg$recStart:pg$recEnd, ]
@@ -85,7 +85,7 @@ markerprofiles_id = list(
 
 process_markerprofiles_id <- function(req, res, err){
   #message(basename(req$path))
-  markerprofilesDbId <- basename(req$path) %>% as.integer()
+  germplasmDbId <- basename(req$path) %>% as.integer()
 
   prms <- names(req$params)
 
@@ -103,7 +103,7 @@ process_markerprofiles_id <- function(req, res, err){
 
   markerprofiles_id$result$data = markerprofiles_id_list(
     #germplasmDbId,
-    markerprofilesDbId,
+    germplasmDbId,
     unknownString, expandHomozygotes, sepPhased, sepUnphased,
     page, pageSize)
   markerprofiles_id$metadata$pagination = attr(markerprofiles_id$result$data, "pagination")

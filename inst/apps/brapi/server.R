@@ -24,8 +24,10 @@ source(system.file("apps/brapi/mw_maps.R", package = "brapiTS"))
 source(system.file("apps/brapi/mw_maps_details.R", package = "brapiTS"))
 source(system.file("apps/brapi/mw_maps_positions.R", package = "brapiTS"))
 source(system.file("apps/brapi/mw_maps_positions_range.R", package = "brapiTS"))
-
-
+source(system.file("apps/brapi/mw_markers.R", package = "brapiTS"))
+source(system.file("apps/brapi/mw_markerprofiles.R", package = "brapiTS"))
+source(system.file("apps/brapi/mw_markerprofiles_id.R", package = "brapiTS"))
+source(system.file("apps/brapi/mw_allelematrix_search.R", package = "brapiTS"))
 
 
 
@@ -56,10 +58,11 @@ res <- jug() %>%
   include(mw_maps_positions_range) %>%
   
   
-  # include(mw_markers) %>%
-  # include(mw_markerprofiles) %>%
-  # include(mw_markerprofiles_id) %>%
-  # include(mw_allelematrix_search) %>%
+  include(mw_markers) %>%
+  include(mw_markerprofiles) %>%
+  include(mw_markerprofiles_id) %>%
+  include(mw_allelematrix_search) %>%
+  
   # include(mw_phenotypes_search) %>%
   # include(mw_programs) %>%
   

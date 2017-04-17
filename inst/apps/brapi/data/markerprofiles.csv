@@ -1,0 +1,3 @@
+germplasmDbId,markerProfileDbId,uniqueDisplayName,sampleDbId,extractDbId,studyDbId,analysisMethod,resultCount
+3,3,Name003,101,1,1,GBS,10
+4,4,Name004,102,2,2,GBS,10

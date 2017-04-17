@@ -1,11 +1,11 @@
 
 
 germplasm_markerprofiles_data = tryCatch({
-  x <- read.csv(system.file("apps/brapi/data/germplasm_markerprofiles.csv",
+  x <- read.csv(system.file("apps/brapi/data/markerprofiles.csv",
                        package = "brapiTS"),
-           stringsAsFactors = FALSE)
+           stringsAsFactors = FALSE)[, c(1, 2)]
   x$germplasmDbId <- as.integer(x$germplasmDbId)
-  x
+  names(x)[2] <- "markerProfiles"
 }, error = function(e){
   NULL
 }

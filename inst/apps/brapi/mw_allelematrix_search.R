@@ -1,10 +1,10 @@
 # library(jug)
 # library(jsonlite)
-source(system.file("apps/brapi/utils/brapi_status.R", package = "brapiTS"))
-source(system.file("apps/brapi/utils/paging.R", package = "brapiTS"))
-source(system.file("apps/brapi/utils/safe_split.R", package = "brapiTS"))
-source(system.file("apps/brapi/utils/toTextTable.R", package = "brapiTS"))
-source(system.file("apps/brapi/utils/get_germplasm.R", package = "brapiTS"))
+# source(system.file("apps/brapi/utils/brapi_status.R", package = "brapiTS"))
+# source(system.file("apps/brapi/utils/paging.R", package = "brapiTS"))
+# source(system.file("apps/brapi/utils/safe_split.R", package = "brapiTS"))
+# source(system.file("apps/brapi/utils/toTextTable.R", package = "brapiTS"))
+# source(system.file("apps/brapi/utils/get_germplasm.R", package = "brapiTS"))
 
 allelematrix_search_data = tryCatch({
   read.csv(system.file("apps/brapi/data/markerprofiles.csv", package = "brapiTS"),
@@ -30,11 +30,11 @@ allelematrix_search_list = function(markerprofilesDbId = "", markerDbId = "",
                                   page = 0, pageSize = 1000){
 
   #message(format)
-  markerprofilesDbId <- tryCatch({safe_split(markerprofilesDbId, ",") %>% as.integer()},
+  markerprofilesDbId <- tryCatch({safe_split(markerprofilesDbId, ",")},
                                  error = function(e){NA})
   if(!any(is.na(markerprofilesDbId))) {
     allelematrix_search_data <- allelematrix_search_data[
-      allelematrix_search_data$markerProfilesDbId %in% markerprofilesDbId, ]
+      allelematrix_search_data$markerProfileDbId %in% markerprofilesDbId, ]
   }
   if(nrow(allelematrix_search_data) == 0) return(NULL)
   #if(!any(markerprofilesDbId == allelematrix_search_alleles_data$markerprofilesDbId)) return(NULL)

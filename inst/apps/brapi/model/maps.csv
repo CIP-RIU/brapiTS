@@ -1,4 +1,4 @@
 mapDbId,name,species,type,unit,publishedDate,markerCount,linkageGroupCount,comments
-1,SSR map 1,Fructus novus,Genetic,cM,6/1/2016,10,2,
-2,SSR map 2,Fructus novus,Genetic,cM,11/15/2016,10,1,none
-3,GBS genomic map,Fructus novus,Physical,bp,12/1/2016,20,3,whatever
+1,SSR map 1,Fructus novus,Genetic,cM,6/1/2016,,,
+2,SSR map 2,Fructus novus,Genetic,cM,11/15/2016,,,none
+3,GBS genomic map,Fructus novus,Physical,cM,12/1/2016,,,whatever
