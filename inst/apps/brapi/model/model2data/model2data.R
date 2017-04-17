@@ -125,13 +125,7 @@ mrks_data <- mrks_data[, c("markerprofilesDbId", "markerDbId",
 names(mrks_data)[3] <- "marker"
 readr::write_csv(mrks_data, "../../data/markerprofiles_alleles.csv") 
 
-
-## uniqueDisplayName = germplasmDbId <- germplasm-search,
-## resultsCount = n markers in profile for germplasm <- markerprofiles_alleles
-
-# markerprofiles_alleles
-## marker = markerName = defaultDisplayName <- markers
-
+# programs, trials, studytypes ...
 
 
 
