@@ -1,0 +1,73 @@
+germplasmDbId,attributeDbId,attributeName,attributeCode,value,dateDetermined
+1,1,Rht-B1b,RHT,Present,20160101
+1,2,Weevil Resistance,WEV,Absent,20160101
+1,3,Flesh Color Orange allele,FLSHORG,1,20160101
+1,4,Flower color white allele,FLWCOL,3,20160101
+1,5,R allele 1,RAL1,Heterozygous,20160101
+1,6,R allele 2,RAL2,5,20161101
+1,7,R allele 3,RAL3,7,20161201
+1,8,R allele 4,RAL4,9,20161201
+1,9,R allele 5,RAL5,3,20161201
+2,1,Rht-B1b,RHT,Absent,20170215
+2,2,Weevil Resistance,WEV,Heterozygous,20170215
+2,3,Flesh Color Orange allele,FLSHORG,3,20170215
+2,4,Flower color white allele,FLWCOL,4,20170215
+2,5,R allele 1,RAL1,Absent,20170215
+2,6,R allele 2,RAL2,7,20170215
+2,7,R allele 3,RAL3,8,20170215
+2,8,R allele 4,RAL4,2,20170215
+2,9,R allele 5,RAL5,1,20170215
+3,1,Rht-B1b,RHT,Heterozygous,20170215
+3,2,Weevil Resistance,WEV,Present,20170215
+3,3,Flesh Color Orange allele,FLSHORG,9,20170215
+3,4,Flower color white allele,FLWCOL,5,20170215
+3,5,R allele 1,RAL1,1,20170215
+3,6,R allele 2,RAL2,2,20170215
+3,7,R allele 3,RAL3,6,20170215
+3,8,R allele 4,RAL4,7,20170215
+3,9,R allele 5,RAL5,8,20170215
+4,1,Rht-B1b,RHT,Present,20170215
+4,2,Weevil Resistance,WEV,Heterozygous,20170215
+4,3,Flesh Color Orange allele,FLSHORG,5,20170215
+4,4,Flower color white allele,FLWCOL,9,20170215
+4,5,R allele 1,RAL1,Absent,20170215
+4,6,R allele 2,RAL2,9,20170215
+4,7,R allele 3,RAL3,8,20170215
+4,8,R allele 4,RAL4,7,20170215
+4,9,R allele 5,RAL5,6,20170215
+5,1,Rht-B1b,RHT,Absent,20151111
+5,2,Weevil Resistance,WEV,Heterozygous,20151111
+5,3,Flesh Color Orange allele,FLSHORG,8,20151111
+5,4,Flower color white allele,FLWCOL,5,20151111
+5,5,R allele 1,RAL1,Absent,20151111
+5,6,R allele 2,RAL2,3,20151111
+5,7,R allele 3,RAL3,4,20151111
+5,8,R allele 4,RAL4,5,20151111
+5,9,R allele 5,RAL5,6,20151111
+6,1,Rht-B1b,RHT,Heterozygous,20151111
+6,2,Weevil Resistance,WEV,Absent,20151111
+6,3,Flesh Color Orange allele,FLSHORG,8,20151111
+6,4,Flower color white allele,FLWCOL,7,20151111
+6,5,R allele 1,RAL1,Present,20151111
+6,6,R allele 2,RAL2,7,20151111
+6,7,R allele 3,RAL3,6,20151111
+6,8,R allele 4,RAL4,5,20151111
+6,9,R allele 5,RAL5,2,20151111
+7,1,Rht-B1b,RHT,Present,20151111
+7,2,Weevil Resistance,WEV,Heterozygous,20151111
+7,3,Flesh Color Orange allele,FLSHORG,9,20151111
+7,4,Flower color white allele,FLWCOL,8,20151111
+7,5,R allele 1,RAL1,Present,20151111
+7,6,R allele 2,RAL2,3,20151111
+7,7,R allele 3,RAL3,2,20151111
+7,8,R allele 4,RAL4,6,20151111
+7,9,R allele 5,RAL5,4,20151111
+8,1,Rht-B1b,RHT,Absent,20151111
+8,2,Weevil Resistance,WEV,Absent,20151111
+8,3,Flesh Color Orange allele,FLSHORG,9,20151111
+8,4,Flower color white allele,FLWCOL,1,20151111
+8,5,R allele 1,RAL1,Heterozygous,20151111
+8,6,R allele 2,RAL2,7,20151111
+8,7,R allele 3,RAL3,5,20151111
+8,8,R allele 4,RAL4,9,20151111
+8,9,R allele 5,RAL5,7,20151111

@@ -62,7 +62,7 @@ readr::write_csv(gplsch, "../../data/germplasm-search.csv")
 #location
 file.copy("../locations.csv", "../../data/locations.csv",
           overwrite = TRUE)
-file.copy("../locations_additionalInfo.csv", "../../data/lcoations_additionalInfo.csv",
+file.copy("../locations_additionalInfo.csv", "../../data/locations_additionalInfo.csv",
           overwrite = TRUE)
 
 #maps

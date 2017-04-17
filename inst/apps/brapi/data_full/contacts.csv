@@ -1,0 +1,6 @@
+contactDbId,name,email,type,orcid
+C0001,A. Breeder,a.breeder@brapi.org,Breeder,0000-0002-0607-8728
+C0002,B. Breeder,b.breeder@brapi.org,Breeder,0000-0002-0607-8729
+C0003,C. Breeder,c.breeder@brapi.org,Breeder,0000-0002-0607-8730
+C0004,A. Technician,a.technician@brapi.org,Technician,0000-0002-0607-8731
+C0005,B. Technician,b.technician@brapi.org,Technician,0000-0002-0607-8732

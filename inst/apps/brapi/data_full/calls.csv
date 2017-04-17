@@ -1,0 +1,53 @@
+call,datatypes,methods
+token,json; text,POST
+token,json; text,DELETE
+calls,json,GET
+crops,json,GET
+maps,json,GET
+maps/id/positions,json,GET
+maps/id/positions/id,json,GET
+maps/id,json,GET
+germplasm/id,json,GET
+studies/id/germplasm,json,GET
+germplasm/id/markerprofiles,json,GET
+germplasm/id/pedigree,json,GET
+germplasm-search,json,GET
+germplasm-search,json,POST
+attributes,json,GET
+attributes/categories,json,GET
+germplasm/id/attributes/,json,GET
+locations,json,GET
+allelematrix-search,json; csv; tsv,GET
+allelematrix-search,json; csv; tsv,POST
+markerprofiles/id,json,GET
+markerprofiles-search,json,POST
+markerprofiles,json,GET
+markers/id,json,GET
+markers,json,GET
+variables,json,GET
+variables/datatypes,json,GET
+variables/id,json,GET
+ontologies,json,GET
+variables-search,json,POST
+phenotypes-search,json,POST
+programs,json,GET
+programs-search,json,POST
+samples,json,PUT
+samples/id,json,GET
+studies/id,json,GET
+observationLevels,json,GET
+studies/id/observations,json,GET
+studies/id/observationunits,json,GET
+studies/id/observationunits,json,POST
+studies/id/observationVariables,json,GET
+studies-search,json,GET
+studies-search,json,POST
+seasons,json,GET
+studyTypes,json,GET
+studies/id/table,json; csv; tsv,GET
+studies/id/layout,json,GET
+studies/id/table,json,POST
+traits,json,GET
+traits/id,json,GET
+trials,json,GET
+trials/id,json,GET

@@ -1,0 +1,10 @@
+germplasmDbId,defaultDisplayName,accessionNumber,germplasmName,germplasmPUI,pedigree,seedSource,synonyms,commonCropName,instituteCode,instituteName,biologicalStatusOfAccessionCode,countryOfOriginCode,typeOfGermplasmStorageCode,genus,species,speciesAuthority,subtaxa,subtaxaAuthority,donors,acquisitionDate
+1,G000001,A000001,Name001,http://pui.per/accession/A000001,landrace,open pollination,landrace 1,crop1,PER001,INST1,300,BRA,13,Fructus,novus,L,NA,NA,1,19840101
+2,G000002,A000002,Name002,http://pui.per/accession/A000002,landrace,open pollination,landrace 2,crop1,PER001,INST1,300,ECU,20,Fructus,novus,L,NA,NA,2,19840101
+3,G000003,A000003,Name003,http://pui.per/accession/A000003,A000001 / A000002,A000001/A000002,variety 1,crop1,PER001,INST1,500,PER,12,Fructus,novus,L,NA,NA,3,20010101
+4,G000004,A000004,Name004,http://pui.per/accession/A000004,NA,NA,variety 4,crop1,PER001,INST1,500,PER,12,Fructus,novus,L,NA,NA,4,20010101
+5,G000005,A000005,Name005,http://pui.per/accession/A000005,NA,NA,variety 5,crop1,PER001,INST1,500,ECU,12,Fructus,novus,L,NA,NA,5,20010101
+6,G000006,A000006,Name006,http://pui.per/accession/A000006,NA,NA,variety 6,crop1,PER001,INST1,500,PER,12,Fructus,novus,L,NA,NA,6,20010101
+7,G000007,A000007,Name007,http://pui.per/accession/A000007,NA,NA,variety 7,crop1,PER001,INST1,500,PER,12,Fructus,novus,L,NA,NA,7,20010101
+8,G000008,A000008,Name008,http://pui.per/accession/A000008,NA,NA,variety 8,crop1,PER001,INST1,500,PER,12,Fructus,novus,L,NA,NA,8,20010101
+9,Local_variety,A000009,Local_variety,http://pui.per/accession/A000009,landrace,open pollination,landrace,crop1,PER001,INST1,300,PER,13,Fructus,novus,L,NA,NA,9,20010101

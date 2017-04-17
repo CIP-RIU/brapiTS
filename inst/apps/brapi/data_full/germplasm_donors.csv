@@ -1,0 +1,10 @@
+germplasmDbId,donorAccessionNumber,donorInstituteCode,germplasmPUI
+1,BRA001001,BRA001,http://pui.bra/accession/BRA001001
+2,ECU001001,ECU001,http://pui.ecu/accession/ECU001001
+3,PER000003,PER001,http://pui.per/accession/PER000003
+4,PER000004,PER001,http://pui.per/accession/PER000004
+5,ECU001002,ECU002,http://pui.ecu/accession/ECU001002
+6,PER002001,PER002,http://pui.per/accession/PER002001
+7,PER002002,PER002,http://pui.per/accession/PER002002
+8,PER002003,PER002,http://pui.per/accession/PER002003
+9,PER002004,PER002,http://pui.per/accession/PER002004
