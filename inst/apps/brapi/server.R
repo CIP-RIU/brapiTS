@@ -9,6 +9,24 @@ list.files(system.file("apps/brapi/utils", package = "brapiTS"), full.names = TR
 
 source(system.file("apps/brapi/mw_calls.R", package = "brapiTS"))
 source(system.file("apps/brapi/mw_token.R", package = "brapiTS"))
+source(system.file("apps/brapi/mw_crops.R", package = "brapiTS"))
+source(system.file("apps/brapi/mw_attributes.R", package = "brapiTS"))
+source(system.file("apps/brapi/mw_attributes_categories.R", package = "brapiTS"))
+source(system.file("apps/brapi/mw_germplasm_attributes.R", package = "brapiTS"))
+source(system.file("apps/brapi/mw_germplasm.R", package = "brapiTS"))
+source(system.file("apps/brapi/mw_germplasm_pedigree.R", package = "brapiTS"))
+source(system.file("apps/brapi/mw_germplasm_markerprofiles.R", package = "brapiTS"))
+source(system.file("apps/brapi/mw_germplasm_search.R", package = "brapiTS"))
+
+source(system.file("apps/brapi/mw_locations.R", package = "brapiTS"))
+
+source(system.file("apps/brapi/mw_maps.R", package = "brapiTS"))
+source(system.file("apps/brapi/mw_maps_details.R", package = "brapiTS"))
+source(system.file("apps/brapi/mw_maps_positions.R", package = "brapiTS"))
+source(system.file("apps/brapi/mw_maps_positions_range.R", package = "brapiTS"))
+
+
+
 
 
 res <- jug() %>%
@@ -18,24 +36,33 @@ res <- jug() %>%
   }) %>%
 
   # each 'include' corresponds to a first level path and corresponding path
-  #include(mw_logs) %>%
 
-  include(mw_calls) %>%
   include(mw_token) %>%
-  #include(mw_germplasm_search) %>%
-  # include(mw_germplasm) %>%
-  #include(mw_germplasm_pedigree) %>%
-  # include(mw_germplasm_markerprofiles) %>%
-  # include(mw_attributes) %>%
-  #include(mw_attributes_categories) %>%
-  # include(mw_germplasm_attributes) %>%
+  include(mw_crops) %>%
+  include(mw_attributes) %>%
+  include(mw_attributes_categories) %>%
+  include(mw_calls) %>%
+  include(mw_germplasm_attributes) %>%
+  include(mw_germplasm_markerprofiles) %>%
+  include(mw_germplasm_search) %>%
+  include(mw_germplasm) %>%
+  include(mw_germplasm_pedigree) %>%
+  
+  include(mw_locations) %>%
+  
+  include(mw_maps) %>%
+  include(mw_maps_details) %>%
+  include(mw_maps_positions) %>%
+  include(mw_maps_positions_range) %>%
+  
+  
   # include(mw_markers) %>%
   # include(mw_markerprofiles) %>%
   # include(mw_markerprofiles_id) %>%
   # include(mw_allelematrix_search) %>%
   # include(mw_phenotypes_search) %>%
   # include(mw_programs) %>%
-  # include(mw_crops) %>%
+  
   # include(mw_trials) %>%
   # include(mw_seasons) %>%
   # include(mw_studytypes) %>%
@@ -54,11 +81,7 @@ res <- jug() %>%
   # include(mw_variables_ontologies) %>%
   # include(mw_variables) %>%
   # include(mw_observationVariables) %>%
-  # include(mw_maps) %>%
-  # include(mw_maps_details) %>%
-  # include(mw_maps_positions) %>%
-  # include(mw_maps_positions_range) %>%
-  # include(mw_locations) %>%
+    
   # include(mw_samples) %>%
 
   # catch any remaining unknown pathes

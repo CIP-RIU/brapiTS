@@ -69,7 +69,6 @@ file.copy("../locations_additionalInfo.csv", "../../data/locations_additionalInf
 file.copy("../maps.csv", "../../data/maps.csv",
           overwrite = TRUE)
 
-
 # map_positions
 ## markerName <- markers
 mappos <- readr::read_csv("../maps_positions.csv")
