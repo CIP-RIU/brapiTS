@@ -29,7 +29,9 @@ source(system.file("apps/brapi/mw_markerprofiles.R", package = "brapiTS"))
 source(system.file("apps/brapi/mw_markerprofiles_id.R", package = "brapiTS"))
 source(system.file("apps/brapi/mw_allelematrix_search.R", package = "brapiTS"))
 
-
+source(system.file("apps/brapi/mw_programs.R", package = "brapiTS"))
+source(system.file("apps/brapi/mw_studytypes.R", package = "brapiTS"))
+source(system.file("apps/brapi/mw_seasons.R", package = "brapiTS"))
 
 res <- jug() %>%
   cors() %>%
@@ -63,12 +65,17 @@ res <- jug() %>%
   include(mw_markerprofiles_id) %>%
   include(mw_allelematrix_search) %>%
   
+  include(mw_programs) %>%
+  include(mw_studytypes) %>%
+  include(mw_seasons) %>%
+  
+  
+  
   # include(mw_phenotypes_search) %>%
-  # include(mw_programs) %>%
+  
   
   # include(mw_trials) %>%
-  # include(mw_seasons) %>%
-  # include(mw_studytypes) %>%
+  
   # include(mw_studies_search) %>%
   # include(mw_studies) %>%
   # include(mw_studies_layout) %>%

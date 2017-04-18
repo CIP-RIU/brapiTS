@@ -127,5 +127,21 @@ readr::write_csv(mrks_data, "../../data/markerprofiles_alleles.csv")
 
 # programs, trials, studytypes ...
 
+# programs
+file.copy("../programs.csv", "../../data/programs.csv",
+          overwrite = TRUE)
 
+# studytypes
+file.copy("../studyTypes.csv", "../../data/studyTypes.csv",
+          overwrite = TRUE)
 
+# seasons
+stds <- readr::read_csv("../studies.csv")
+seas <- stds$seasons %>% stringr::str_split(pattern =  ";") %>% unlist %>% 
+  stringr::str_trim() %>%
+  unique %>% sort %>% stringr::str_split(pattern = " ") %>%
+  unlist(seas) %>% matrix(ncol = 2, byrow = TRUE) %>% as.data.frame()
+names(seas) <- c("year", "season")
+seas <- cbind(id = 1:nrow(seas), seas)
+seas <- seas[, c("id", "season", "year")]
+readr::write_csv(seas, "../../data/seasons.csv") 
