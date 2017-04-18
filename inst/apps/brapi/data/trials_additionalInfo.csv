@@ -1,0 +1,9 @@
+trialDbId,donorName,specialProject,collaborator,fundingUSD
+101,Donor1,Project1,NA,NA
+103,Donor2,NA,NationalPartner1,300000
+104,Donor1,Project2,NA,NA
+105,NA,NA,NA,NA
+106,NA,NA,NA,NA
+107,NA,Project2,NA,1000000
+108,Donor1,NA,NationalPartner1,NA
+109,NA,Project1,NA,500000

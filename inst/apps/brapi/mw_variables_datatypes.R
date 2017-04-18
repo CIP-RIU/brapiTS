@@ -1,7 +1,8 @@
 variables_datatypes_data = tryCatch({
-  res <- read.csv(system.file("apps/brapi/data/variables_datatypes.csv", package = "brapiTS"),
+  res <- read.csv(system.file("apps/brapi/data/variables_datatypes.csv",
+                              package = "brapiTS"),
                   stringsAsFactors = FALSE)
-  res[, 1]
+  #res[, 1]
 }, error = function(e) {
   NULL
 }
@@ -28,7 +29,7 @@ mw_variables_datatypes <<-
    get("/brapi/v1/variables/datatypes[/]?", function(req, res, err){
      res$set_header("ContentType", "text/plain")
      res$set_status(200)
-     res$text(paste(variables_datatypes_data, collapse = ", "))
+     #res$text(paste(variables_datatypes_data, collapse = ", "))
      res$json(variables_datatypes)
   }) %>%
   post("/brapi/v1/variables/datatypes[/]?", function(req, res, err){

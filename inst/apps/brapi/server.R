@@ -3,9 +3,13 @@ library(jug)
 # workaround: the include function's 2nd parameter does not seem to
 # work correctly. So here is a one line solution:
 # Load all modules in memory to activate mw_ variables for include
-# x = list.files(system.file("apps/brapi", package = "brapiTS"), pattern = "mw_", full.names = TRUE) %>%
+
+list.files(system.file("apps/brapi/utils", package = "brapiTS"), 
+           full.names = TRUE, recursive = TRUE) %>% lapply(source)
+
+# x = list.files(system.file("apps/brapi", package = "brapiTS"), 
+# pattern = "mw_", full.names = TRUE) %>%
 #   lapply(source)
-list.files(system.file("apps/brapi/utils", package = "brapiTS"), full.names = TRUE, recursive = TRUE) %>% lapply(source)
 
 source(system.file("apps/brapi/mw_calls.R", package = "brapiTS"))
 source(system.file("apps/brapi/mw_token.R", package = "brapiTS"))
@@ -32,6 +36,15 @@ source(system.file("apps/brapi/mw_allelematrix_search.R", package = "brapiTS"))
 source(system.file("apps/brapi/mw_programs.R", package = "brapiTS"))
 source(system.file("apps/brapi/mw_studytypes.R", package = "brapiTS"))
 source(system.file("apps/brapi/mw_seasons.R", package = "brapiTS"))
+source(system.file("apps/brapi/mw_trials.R", package = "brapiTS"))
+source(system.file("apps/brapi/mw_studies.R", package = "brapiTS"))
+source(system.file("apps/brapi/mw_studies_search.R", package = "brapiTS"))
+
+source(system.file("apps/brapi/mw_variables_datatypes.R", package = "brapiTS"))
+source(system.file("apps/brapi/mw_variables_ontologies.R", package = "brapiTS"))
+source(system.file("apps/brapi/mw_observationlevels.R", package = "brapiTS"))
+
+
 
 res <- jug() %>%
   cors() %>%
@@ -59,7 +72,6 @@ res <- jug() %>%
   include(mw_maps_positions) %>%
   include(mw_maps_positions_range) %>%
   
-  
   include(mw_markers) %>%
   include(mw_markerprofiles) %>%
   include(mw_markerprofiles_id) %>%
@@ -68,32 +80,34 @@ res <- jug() %>%
   include(mw_programs) %>%
   include(mw_studytypes) %>%
   include(mw_seasons) %>%
+  include(mw_trials) %>%
+  include(mw_studies) %>%
+  include(mw_studies_search) %>%
   
+  include(mw_variables_datatypes) %>%
+  include(mw_variables_ontologies) %>%
+  include(mw_observationlevels) %>%
+  
+  # include(mw_samples) %>%
+  # include(mw_traits) %>%
+  # include(mw_variables) %>%
   
   
   # include(mw_phenotypes_search) %>%
   
-  
-  # include(mw_trials) %>%
-  
-  # include(mw_studies_search) %>%
-  # include(mw_studies) %>%
   # include(mw_studies_layout) %>%
   # include(mw_studies_germplasm) %>%
   # include(mw_studies_observations) %>%
   # include(mw_studies_observationunits) %>%
   # include(mw_studies_observationVariables) %>%
   # include(mw_studies_table) %>%
-  # include(mw_observationlevels) %>%
-  # include(mw_phenotypes_search) %>%
-  # include(mw_traits) %>%
-  # include(mw_variables_datatypes) %>%
-  # include(mw_variables_ontologies) %>%
-  # include(mw_variables) %>%
-  # include(mw_observationVariables) %>%
+  
+  
     
-  # include(mw_samples) %>%
+  
 
+
+  # ??? include(mw_observationVariables) %>%
   # catch any remaining unknown pathes
   simple_error_handler() %>%
   serve_it(port = 2021)

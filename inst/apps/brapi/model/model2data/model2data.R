@@ -145,3 +145,49 @@ names(seas) <- c("year", "season")
 seas <- cbind(id = 1:nrow(seas), seas)
 seas <- seas[, c("id", "season", "year")]
 readr::write_csv(seas, "../../data/seasons.csv") 
+
+# trials
+trl <- readr::read_csv("../trials.csv")
+prg <- readr::read_csv("../programs.csv")
+trl <- merge(trl, prg, "programDbId")
+trl <- trl[, c("trialDbId", "trialName", "programDbId", "name", "startDate",
+               "endDate", "active")]
+readr::write_csv(trl, "../../data/trials.csv")
+
+file.copy("../trials_additionalInfo.csv", "../../data/trials_additionalInfo.csv",
+          overwrite = TRUE)
+
+# studies
+stds <- readr::read_csv("../studies.csv")
+trls <- readr::read_csv("../trials.csv")[c("trialDbId", "trialName", 
+                                           "programDbId")]
+prgs <- readr::read_csv("../programs.csv")[c("programDbId", "name")]
+names(prgs)[2] <- "programName"
+locs <- readr::read_csv("../locations.csv")[c("locationDbId", "name")]
+names(locs)[2] <- "locationName"
+
+stds <- merge(stds, trls, "trialDbId")
+stds <- merge(stds, prgs, "programDbId")
+stds <- merge(stds, locs, "locationDbId")
+
+
+stds <- stds[, c("studyDbId", "studyName", "trialDbId", "trialName",
+                 "studyType", "seasons", 
+                 "locationDbId", "locationName",
+                 "programDbId", "programName",
+                 "startDate", "endDate", "active", "contactDbId")]
+readr::write_csv(stds, "../../data/studies.csv")
+
+file.copy("../studies_additionalInfo.csv", "../../data/studies_additionalInfo.csv",
+          overwrite = TRUE)
+
+# traits, variables, ...
+file.copy("../variables_datatypes.csv", "../../data/variables_datatypes.csv",
+          overwrite = TRUE)
+file.copy("../variables_ontology.csv", "../../data/variables_ontology.csv",
+          overwrite = TRUE)
+file.copy("../observationlevels.csv", "../../data/observationlevels.csv",
+          overwrite = TRUE)
+
+
+

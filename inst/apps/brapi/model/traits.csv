@@ -1,6 +1,6 @@
-traitDbId,traitId,name,description,observationVariables,defaultValue
-1,MO_123:0100620,Carotenoid content,Cassava storage root pulp carotenoid content,MO_123:0100621;MO_123:0100623;MO_123:0100623, 
-2,MO_123:0100621,Plant height,Plant height,MO_123:0200001, 
-3,MO_123:0100622,Root weight,Root weight,MO_123:0200002;MO_1234:0300002, 
-4,MO_123:0100623,Root color,Root color,MO_123:0200003,3
-5,MO_123:0100624,Virus susceptibility,Virus susceptibility,MO_123:0200004,5
+traitDbId,traitId,name,class,description,synonyms,mainAbbreviation,alternativeAbbreviations,entity,attribute,status,xref,defaultValue
+1,MO_123:0100620,Carotenoid content,Biochemical,Cassava storage root pulp carotenoid content,,RtFlsCrt_Ms_ugperg,RCC,root,quality,recommended,Author et al, 
+2,MO_123:0100621,Plant height,Agronomic,Plant height,height,PltStmHt_Ms_cm,PHT,plant,height,recommended,Author et al, 
+3,MO_123:0100622,Root weight,Agronomic,Root weight,yield,RtYld_Ms_kgperplot,RWT,root,weight,recommended,Author et al, 
+4,MO_123:0100623,Root color,Agronomic,Root color,color,RtFlsCol_Es_0to9,RCL,root,color,recommended,Author et al,3
+5,MO_123:0100624,Virus susceptibility,Biotic stress,Virus susceptibility,virus,PltLefVir_Es_0to9,LVR,leaf,susceptibility,recommended,Author et al,5

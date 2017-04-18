@@ -1,12 +1,12 @@
-studyDbId,studyName,trialDbId,trialName,studyType,seasons,locationDbId,locationName,programDbId,programName,startDate,endDate,active,contactDbId
-1001,Peru Yield Trial 1-1,101,Peru Yield Trial 1,Yield study,2013 A,1,Location 1,1,Program 1,1/1/2013,7/5/2013,FALSE,C0001; C0002
-1002,Peru Yield Trial 2-1,102,Peru Yield Trial 2,Yield study,2014 B,2,Location 2,1,Program 1,6/1/2014,1/15/2015,FALSE,C0003
-1003,Ghana Yield Trial MET 1,103,Ghana Genotype Trial 1,MET study,2011 A; 2012 A,13,Location 13,2,Program 2,5/1/2011,12/15/2011,FALSE,C0004
-1004,Ghana Yield Trial MET 2,103,Ghana Genotype Trial 1,MET study,2011 A; 2012 A,14,Location 14,2,Program 2,5/1/2011,12/15/2011,FALSE,
-1005,Ghana Yield Trial MET 3,103,Ghana Genotype Trial 1,MET study,2011 A; 2012 A,15,Location 15,2,Program 2,5/1/2011,12/15/2011,FALSE,C0001; C0003; C0004
-1006,Ghana Yield Trial 1-1,104,Ghana Yield Trial 1,Yield study,2012 B,16,Location 16,3,Program 3,7/1/2012,2/1/2013,FALSE,C0002
-1007,Ghana Yield Trial 2-1,105,Ghana Yield Trial 2,Yield study,2013 A,17,Location 17,3,Program 3,8/15/2013,2/28/2014,FALSE,C0003
-1008,Ghana Yield Trial 3-1,106,Ghana Yield Trial 3,Yield study,2014 B,16,Location 16,3,Program 3,9/22/2014,3/21/2015,TRUE,C0005; C0001
-1009,Mozambique Yield Trial,107,Mozambique Yield Trial,Yield study,2011 A,4,Location 4,4,Program 4,5/12/2011,11/30/2011,FALSE,C0002; C0003
-1010,Mozambique Genotype Trial,108,Mozambique Genotype Trial,Yield study,2012 B,5,Location 5,4,Program 4,2/17/2012,8/21/2012,FALSE,C0004
-1011,Demo Yield Trial,109,Demo Yield Trial,Yield study,2016 A,3,Location 3,6,Program 6,3/24/2016,10/21/2016,TRUE,
+studyDbId,studyName,trialDbId,studyType,seasons,locationDbId,startDate,endDate,active,contactDbId
+1001,Peru Yield Trial 1-1,101,Yield study,2013 A,1,1/1/2013,7/5/2013,FALSE,C0001; C0002
+1002,Peru Yield Trial 2-1,102,Yield study,2014 B,2,6/1/2014,1/15/2015,FALSE,C0003
+1003,Ghana Yield Trial MET 1,103,MET study,2011 A; 2012 A,13,5/1/2011,12/15/2011,FALSE,C0004
+1004,Ghana Yield Trial MET 2,103,MET study,2011 A; 2012 A,14,5/1/2011,12/15/2011,FALSE,
+1005,Ghana Yield Trial MET 3,103,MET study,2011 A; 2012 A,15,5/1/2011,12/15/2011,FALSE,C0001; C0003; C0004
+1006,Ghana Yield Trial 1-1,104,Yield study,2012 B,16,7/1/2012,2/1/2013,FALSE,C0002
+1007,Ghana Yield Trial 2-1,105,Yield study,2013 A,17,8/15/2013,2/28/2014,FALSE,C0003
+1008,Ghana Yield Trial 3-1,106,Yield study,2014 B,16,9/22/2014,3/21/2015,TRUE,C0005; C0001
+1009,Mozambique Yield Trial,107,Yield study,2011 A,4,5/12/2011,11/30/2011,FALSE,C0002; C0003
+1010,Mozambique Genotype Trial,108,Yield study,2012 B,5,2/17/2012,8/21/2012,FALSE,C0004
+1011,Demo Yield Trial,109,Yield study,2016 A,3,3/24/2016,10/21/2016,TRUE,
