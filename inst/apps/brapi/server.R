@@ -43,6 +43,7 @@ source(system.file("apps/brapi/mw_studies_search.R", package = "brapiTS"))
 source(system.file("apps/brapi/mw_variables_datatypes.R", package = "brapiTS"))
 source(system.file("apps/brapi/mw_variables_ontologies.R", package = "brapiTS"))
 source(system.file("apps/brapi/mw_observationlevels.R", package = "brapiTS"))
+source(system.file("apps/brapi/mw_samples.R", package = "brapiTS"))
 
 
 
@@ -88,19 +89,20 @@ res <- jug() %>%
   include(mw_variables_ontologies) %>%
   include(mw_observationlevels) %>%
   
-  # include(mw_samples) %>%
+  include(mw_samples) %>%
   # include(mw_traits) %>%
   # include(mw_variables) %>%
   
-  
-  # include(mw_phenotypes_search) %>%
+  # include(mw_studies_table) %>%
   
   # include(mw_studies_layout) %>%
   # include(mw_studies_germplasm) %>%
-  # include(mw_studies_observations) %>%
-  # include(mw_studies_observationunits) %>%
   # include(mw_studies_observationVariables) %>%
-  # include(mw_studies_table) %>%
+  
+  # include(mw_studies_observations) %>%
+  # include(mw_studies_observationunits) %>% # using table: studies_observations.csv
+  # include(mw_phenotypes_search) %>% # using table: studies_observations.csv
+  
   
   
     
@@ -111,3 +113,10 @@ res <- jug() %>%
   # catch any remaining unknown pathes
   simple_error_handler() %>%
   serve_it(port = 2021)
+
+
+# Next: brapi package:
+# - check each calls behaviour if not implemented/active; return error
+# - if implemented and no data: return empty table!
+# finish!
+

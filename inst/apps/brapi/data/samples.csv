@@ -1,0 +1,2 @@
+studyDbId,locationDbId,plotId,plantId,sampleId,takenBy,sampleDate,sampleType,tissueType,notes,studyName,season,locationName,germplasmDbId,plantingDate,harvestDate
+1001,1,1,1,1,Mr. Technician,7/5/2013,TypeOfSample,TypeOfTissue,Cut from infected leave.,Peru Yield Trial 1-1,2013 A,Location 1,1,1/1/2013,7/5/2013

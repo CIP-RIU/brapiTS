@@ -189,5 +189,47 @@ file.copy("../variables_ontology.csv", "../../data/variables_ontology.csv",
 file.copy("../observationlevels.csv", "../../data/observationlevels.csv",
           overwrite = TRUE)
 
+# sample
+## add locationDbId via studyDbId
+## add germplasmDbId via studyId/plotId
+smpl <- readr::read_csv("../samples.csv")
+stds <- readr::read_csv("../studies.csv")[, c("studyDbId", "studyName", "seasons",
+                                            "locationDbId", "startDate", "endDate")]
+names(stds)[5:6] <- c("plantingDate", "harvestDate")
+names(stds)[3] <- "season"
+locs <- readr::read_csv("../locations.csv")[, c("locationDbId", "name")]
+names(locs)[2] <- "locationName"
+
+smpl <- merge(smpl, stds)
+smpl <- merge(smpl, locs)
+
+std1 <- readr::read_csv("../studies_table_1.csv")[, c("plotNumber", 
+                                                      "germplasmDbId")]
+names(std1)[1] <- "plotId"
+smpl <- merge(smpl, std1)
+
+smpl <- smpl[, c("studyDbId", "locationDbId", "plotId", "plantId", "sampleId",
+                 "takenBy", "sampleDate", "sampleType", "tissueType", "notes",
+                 "studyName", "season", "locationName", "germplasmDbId", 
+                 "plantingDate", "harvestDate")]
+readr::write_csv(smpl, "../../data/samples.csv")
+
+# traits complete / add ref to ontology
+# methods NEW
+# scales NEW
+# observationVariables
+# traits: subset of cols + reverse refs from observationVariables
+
+# design studies_table_x sample files from germplasm, layout & observationVariables
+# add entryNumber!
+
+# from there derive the other tables: _layout, _observations, _observationVariables,
+# _germplasm
+
+
+# authenticate
+
+
+
 
 
