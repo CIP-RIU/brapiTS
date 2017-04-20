@@ -184,10 +184,12 @@ file.copy("../studies_additionalInfo.csv", "../../data/studies_additionalInfo.cs
 # traits, variables, ...
 file.copy("../variables_datatypes.csv", "../../data/variables_datatypes.csv",
           overwrite = TRUE)
-file.copy("../variables_ontology.csv", "../../data/variables_ontology.csv",
-          overwrite = TRUE)
 file.copy("../observationlevels.csv", "../../data/observationlevels.csv",
           overwrite = TRUE)
+
+# ontology
+onto <- readr::read_csv("../variables_ontology.csv")[, c(1:6)]
+readr::write_csv(onto, "../../data/variables_ontology.csv")
 
 # sample
 ## add locationDbId via studyDbId
@@ -214,10 +216,29 @@ smpl <- smpl[, c("studyDbId", "locationDbId", "plotId", "plantId", "sampleId",
                  "plantingDate", "harvestDate")]
 readr::write_csv(smpl, "../../data/samples.csv")
 
+# observationVariables
+obsv <- readr::read_csv("../observationVariable.csv")
+trts <- readr::read_csv("../traits.csv")[, c("traitDbId", "ontologyDbId")]
+obsv <- merge(obsv, trts, "traitDbId")
+onto <- readr::read_csv("../variables_ontology.csv")[, c("ontologyDbId",
+                                                         "ontologyName", "crop")]
+obsv <- merge(obsv, onto, "ontologyDbId")
+obsv <- obsv[, c("observationVariableDbId", "name", "ontologyDbId", "ontologyName",
+                 "synonyms", "contextOfUse", "growthStage", "status", "xref",
+                 "institution", "scientist", "date", "language", "crop",
+                 "traitDbId", "methodDbId", "scaleDbId", "defaultValue")]
+readr::write_csv(obsv, "../../data/observationVariables.csv")
+
+# create the new files for methods and scales and adjust mw_observationVariables
+# accordingly! See in old 'studies_observationVariables' how structure can be.
+
 # traits complete / add ref to ontology
 # methods NEW
 # scales NEW
-# observationVariables
+
+
+
+
 # traits: subset of cols + reverse refs from observationVariables
 
 # design studies_table_x sample files from germplasm, layout & observationVariables

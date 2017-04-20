@@ -1,9 +1,9 @@
 
 observationVariables_data = tryCatch({
-  res <- read.csv(system.file("apps/brapi/data/studies_observationVariables.csv",
+  res <- read.csv(system.file("apps/brapi/data/observationVariables.csv",
                               package = "brapiTS"),
                   stringsAsFactors = FALSE)
-  res[, -c(1, 2)]
+  #res[, -c(1, 2)]
 }, error = function(e) {
   NULL
 }

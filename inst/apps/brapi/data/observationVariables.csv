@@ -1,0 +1,7 @@
+observationVariableDbId,name,ontologyDbId,ontologyName,synonyms,contextOfUse,growthStage,status,xref,institution,scientist,date,language,crop,traitDbId,methodDbId,scaleDbId,defaultValue
+MO_123:100001,Carotenoid content,MO_123,new crop ontology,Carotenoid content by spectrometer,Trial evaluation; Nursery evaluation,mature,recommended,TL_123:1000001,MyInst,A. Physio,2016-12-12,EN,new crop,1,1,1,null
+MO_123:100006,Carotenoid,MO_123,new crop ontology,Carotenoid content by visual estimation,trial evaluation,mature,recommended,TL_123:1000001,MyInst,A. Physio,2016-12-12,EN,new crop,1,1,1,null
+MO_123:100002,Plant height,MO_123,new crop ontology,height,Trial evaluation; Nursery evaluation,mature,recommended,TL_123:1000002,MyInst,A. Physio,2016-12-12,EN,new crop,2,2,2,null
+MO_123:100003,Root weight,MO_123,new crop ontology,yield,Trial evaluation; Nursery evaluation,mature,recommended,TL_123:1000003,MyInst,A. Physio,2016-12-12,EN,new crop,3,3,3,null
+MO_123:100004,Root color,MO_123,new crop ontology,color,Trial evaluation; Nursery evaluation,mature,recommended,TL_123:1000004,MyInst,A. Physio,2016-12-12,EN,new crop,4,4,4,null
+MO_123:100005,Virus susceptibility,MO_123,new crop ontology,virus,Trial evaluation; Nursery evaluation,mature,recommended,TL_123:1000005,MyInst,A. Physio,2016-12-12,EN,new crop,5,5,5,null

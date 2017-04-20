@@ -44,6 +44,7 @@ source(system.file("apps/brapi/mw_variables_datatypes.R", package = "brapiTS"))
 source(system.file("apps/brapi/mw_variables_ontologies.R", package = "brapiTS"))
 source(system.file("apps/brapi/mw_observationlevels.R", package = "brapiTS"))
 source(system.file("apps/brapi/mw_samples.R", package = "brapiTS"))
+source(system.file("apps/brapi/mw_observationVariables_search.R", package = "brapiTS"))
 
 
 
@@ -90,6 +91,7 @@ res <- jug() %>%
   include(mw_observationlevels) %>%
   
   include(mw_samples) %>%
+  include(mw_observationVariables) %>%
   # include(mw_traits) %>%
   # include(mw_variables) %>%
   
