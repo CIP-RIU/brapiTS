@@ -43,7 +43,7 @@ locations_list = function(locationType = "all", page = 0, pageSize = 100){
       additionalInfo = additionalInfo[, !is.na(additionalInfo)  %>% as.logical() ]
       additionalInfo = as.list(additionalInfo)
     }
-    out[[i]]$additionalInfo = list(additionalInfo)
+    out[[i]]$additionalInfo = additionalInfo
   }
 
   attr(out, "status") = list()
