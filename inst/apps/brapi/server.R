@@ -7,10 +7,6 @@ library(jug)
 list.files(system.file("apps/brapi/utils", package = "brapiTS"), 
            full.names = TRUE, recursive = TRUE) %>% lapply(source)
 
-# x = list.files(system.file("apps/brapi", package = "brapiTS"), 
-# pattern = "mw_", full.names = TRUE) %>%
-#   lapply(source)
-
 source(system.file("apps/brapi/mw_calls.R", package = "brapiTS"))
 source(system.file("apps/brapi/mw_token.R", package = "brapiTS"))
 source(system.file("apps/brapi/mw_crops.R", package = "brapiTS"))
@@ -54,7 +50,7 @@ res <- jug() %>%
     "\nMock BrAPI server ready!\n\n"
   }) %>%
 
-  # each 'include' corresponds to a first level path and corresponding path
+  # each 'include' corresponds to a first level path
 
   include(mw_token) %>%
   include(mw_crops) %>%
@@ -92,33 +88,7 @@ res <- jug() %>%
   
   include(mw_samples) %>%
   include(mw_observationVariables) %>%
-  # include(mw_traits) %>%
-  # include(mw_variables) %>%
   
-  # include(mw_studies_table) %>%
-  
-  # include(mw_studies_layout) %>%
-  # include(mw_studies_germplasm) %>%
-  # include(mw_studies_observationVariables) %>%
-  
-  # include(mw_studies_observations) %>%
-  # include(mw_studies_observationunits) %>% # using table: studies_observations.csv
-  # include(mw_phenotypes_search) %>% # using table: studies_observations.csv
-  
-  
-  
-    
-  
-
-
-  # ??? include(mw_observationVariables) %>%
-  # catch any remaining unknown pathes
   simple_error_handler() %>%
   serve_it(port = 2021)
-
-
-# Next: brapi package:
-# - check each calls behaviour if not implemented/active; return error
-# - if implemented and no data: return empty table!
-# finish!
 

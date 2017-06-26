@@ -1,3 +1,5 @@
+# The development and maintenance of this package has been handed over to the repository github/CIP-RIU. 
+
 #Testing 
 
 Discussion at PAG 2017 (Jan 19, 2017).

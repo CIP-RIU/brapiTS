@@ -127,6 +127,8 @@ readr::write_csv(mrks_data, "../../data/markerprofiles_alleles.csv")
 
 # programs, trials, studytypes ...
 
+# TODO: redo from one big table! programs, trials, studies, ...
+
 # programs
 file.copy("../programs.csv", "../../data/programs.csv",
           overwrite = TRUE)
@@ -218,6 +220,9 @@ readr::write_csv(smpl, "../../data/samples.csv")
 
 # observationVariables
 obsv <- readr::read_csv("../observationVariable.csv")
+
+# TODO: redo from here
+
 trts <- readr::read_csv("../traits.csv")[, c("traitDbId", "ontologyDbId")]
 obsv <- merge(obsv, trts, "traitDbId")
 onto <- readr::read_csv("../variables_ontology.csv")[, c("ontologyDbId",
