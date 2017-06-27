@@ -1,3 +1,8 @@
+## This Repository officially belongs to International Potato Center (CIP)
+
+Repository: https://github.com/CIP-RIU/brapiTS
+
+
 #Testing 
 
 Discussion at PAG 2017 (Jan 19, 2017).
