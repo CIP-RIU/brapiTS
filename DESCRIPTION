@@ -5,7 +5,7 @@ Authors@R: person("Reinhard", "Simon", email = "rsimon64@gmail.com", role = c("a
 Description: A test server can be created to create fixture data according to
     the protocols and definitions from the Breeding API (BrAPI).
 Depends:
-    R (>= 3.3.2)
+    R (>= 3.3.1)
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
